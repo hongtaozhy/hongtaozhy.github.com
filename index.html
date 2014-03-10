@@ -71,6 +71,77 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-03-10T03:40:40.000Z"><a href="/2014/03/10/use_instancetype/">3月 10 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/03/10/use_instancetype/">正确的使用instancetype代替id</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>使用instancetype能在编译期帮你处理掉可能发生的错误。比如今天写的一段</p>
+<figure class="highlight objective-c"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">@interface</span> <span class="title">WBWeiboManager</span> : <span class="title">NSObject</span></span>
+
++ (instancetype)sharedInstance;
+
++ (<span class="built_in">BOOL</span>)handleOpenURL:(<span class="built_in">NSURL</span> *)url;
+
+<span class="keyword">@end</span>
+</pre></td></tr></table></figure>
+
+<p>在外面调用时候，我是这样写的</p>
+<figure class="highlight objective-c"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="attr_selector">[[WBWeiboManager sharedInstance]</span> <span class="tag">handleOpenURL</span><span class="pseudo">:url</span>];
+</pre></td></tr></table></figure>
+
+<p>xCode会提示我这样一个错误</p>
+<figure class="highlight objective-c"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>No visible @<span class="keyword">interface</span> <span class="keyword">for</span> <span class="string">'WBWeiboManager'</span> declares the <span class="keyword">selector</span> <span class="string">'handleOpenURL:'</span>
+</pre></td></tr></table></figure>
+
+<p>明显的，我错误的混用了类方法和实例方法，但是如果此时没有使用<code>instancetype</code>而是<code>id</code>，编译器将不会提示我任何错误而会编译通过，隐蔽了一个不合理的使用。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-02-19T07:02:06.000Z"><a href="/2014/02/19/provisioning/">2月 19 2014</a></time>
       
       
@@ -271,59 +342,6 @@
 
 
 
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-01-09T08:24:55.000Z"><a href="/2014/01/09/category&&extension/">1月 9 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/01/09/category&&extension/">(转)Objective-C分类 (category)和扩展(Extension)</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p><a href="http://blog.csdn.net/yhawaii/article/details/6992094" target="_blank">【原文地址】</a></p>
-</blockquote>
-<h1 id="1-category-">1、分类(category)</h1>
-<p>使用Object-C中的分类，是一种编译时的手段，允许我们通过给一个类添加方法来扩充它（但是通过category不能添加新的实例变量），并且我们不需要访问类中的代码就可以做到，这点和javascript中使用原型来定义属性有点类似。
-我们可以为一个类创建一个新的方法，而不需要在代码中编辑类定义。
-下面就是定义并使用分类的例子程序，通过下面代码，我们可以给Object-C中的NSString 添加camelCaseString分类，使用camelCaseString方法，就可以去掉一个字符串中的空格，并将原有空格后的单词改写成大写(即将字符串转化为驼峰式)。
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/01/09/category&&extension/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -347,7 +365,7 @@
   
     <li><a href="/categories/Tips/">Tips</a><small>4</small></li>
   
-    <li><a href="/categories/iOS/">iOS</a><small>2</small></li>
+    <li><a href="/categories/iOS/">iOS</a><small>3</small></li>
   
     <li><a href="/categories/markdown/">markdown</a><small>1</small></li>
   
@@ -367,6 +385,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2014/03/10/use_instancetype/">正确的使用instancetype代替id</a>
+      </li>
+    
+      <li>
         <a href="/2014/02/19/provisioning/">Provisioning文件的存放地址</a>
       </li>
     
@@ -380,10 +402,6 @@
     
       <li>
         <a href="/2014/01/24/string1/">(转)字符串是否包含问题</a>
-      </li>
-    
-      <li>
-        <a href="/2014/01/09/category&amp;&amp;extension/">(转)Objective-C分类 (category)和扩展(Extension)</a>
       </li>
     
   </ul>

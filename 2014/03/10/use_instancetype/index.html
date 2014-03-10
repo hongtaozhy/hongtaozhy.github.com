@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>tools | Hadnot&#39;s blog</title>
+  <title>正确的使用instancetype代替id | Hadnot&#39;s blog</title>
   <meta name="author" content="hongtaozhy">
   
   <meta name="description" content="blog,ios,cpp,程序员,工作,objective-c,oc">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="正确的使用instancetype代替id"/>
   <meta property="og:site_name" content="Hadnot&#39;s blog"/>
 
   
@@ -52,25 +52,105 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">tools</h2>
-
-
-  <div class="archive">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2014-01-29T01:55:25.000Z"><a href="/2014/01/29/tools/">1月 29 2014</a></time>
-            
-              <h1 class="title"><a href="/2014/01/29/tools/">总结下最近用的工具</a></h1>
-            
-          </header>
-        </div>
-      </article>
+      <img src="">
     
   </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-03-10T03:40:40.000Z"><a href="/2014/03/10/use_instancetype/">3月 10 2014</a></time>
+      
+      
+  
+    <h1 class="title">正确的使用instancetype代替id</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>使用instancetype能在编译期帮你处理掉可能发生的错误。比如今天写的一段</p>
+<figure class="highlight objective-c"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">@interface</span> <span class="title">WBWeiboManager</span> : <span class="title">NSObject</span></span>
+
++ (instancetype)sharedInstance;
+
++ (<span class="built_in">BOOL</span>)handleOpenURL:(<span class="built_in">NSURL</span> *)url;
+
+<span class="keyword">@end</span>
+</pre></td></tr></table></figure>
+
+<p>在外面调用时候，我是这样写的</p>
+<figure class="highlight objective-c"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="attr_selector">[[WBWeiboManager sharedInstance]</span> <span class="tag">handleOpenURL</span><span class="pseudo">:url</span>];
+</pre></td></tr></table></figure>
+
+<p>xCode会提示我这样一个错误</p>
+<figure class="highlight objective-c"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>No visible @<span class="keyword">interface</span> <span class="keyword">for</span> <span class="string">'WBWeiboManager'</span> declares the <span class="keyword">selector</span> <span class="string">'handleOpenURL:'</span>
+</pre></td></tr></table></figure>
+
+<p>明显的，我错误的混用了类方法和实例方法，但是如果此时没有使用<code>instancetype</code>而是<code>id</code>，编译器将不会提示我任何错误而会编译通过，隐蔽了一个不合理的使用。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/iOS/">iOS</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/iOS/">iOS</a>, <a href="/tags/Tips/">Tips</a>
+  </div>
+
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <!-- Duoshuo Comment BEGIN -->
+  	<div class="ds-thread"></div>
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"hongtaozhy"};
+  	(function() {
+  		var ds = document.createElement('script');
+  		ds.type = 'text/javascript';ds.async = true;
+  		ds.src = 'http://static.duoshuo.com/embed.js';
+  		ds.charset = 'UTF-8';
+  		(document.getElementsByTagName('head')[0] 
+  		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+  	})();
+  	</script>
+  <!-- Duoshuo Comment END -->
+</section>
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
