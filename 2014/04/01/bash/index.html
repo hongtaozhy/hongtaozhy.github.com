@@ -4,7 +4,7 @@
   <meta property="wb:webmaster" content="54c1f241b580a6e1" />
   <meta charset="utf-8">
   
-  <title>(转)Objective-C分类 (category)和扩展(Extension) | Hadnot&#39;s blog</title>
+  <title>bash | Hadnot&#39;s blog</title>
   <meta name="author" content="hongtaozhy">
   
   <meta name="description" content="blog,ios,cpp,程序员,工作,objective-c,oc">
@@ -12,7 +12,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="(转)Objective-C分类 (category)和扩展(Extension)"/>
+  <meta property="og:title" content="bash"/>
   <meta property="og:site_name" content="Hadnot&#39;s blog"/>
 
   
@@ -71,183 +71,24 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2014-01-09T08:24:55.000Z"><a href="/2014/01/09/category&&extension/">1月 9 2014</a></time>
+        <time datetime="2014-04-01T07:44:44.000Z"><a href="/2014/04/01/bash/">4月 1 2014</a></time>
       
       
   
-    <h1 class="title">(转)Objective-C分类 (category)和扩展(Extension)</h1>
+    <h1 class="title">bash</h1>
   
 
     </header>
     <div class="entry">
       
-        <blockquote>
-<p><a href="http://blog.csdn.net/yhawaii/article/details/6992094" target="_blank">【原文地址】</a></p>
-</blockquote>
-<h1 id="1-category-">1、分类(category)</h1>
-<p>使用Object-C中的分类，是一种编译时的手段，允许我们通过给一个类添加方法来扩充它（但是通过category不能添加新的实例变量），并且我们不需要访问类中的代码就可以做到，这点和javascript中使用原型来定义属性有点类似。
-我们可以为一个类创建一个新的方法，而不需要在代码中编辑类定义。
-下面就是定义并使用分类的例子程序，通过下面代码，我们可以给Object-C中的NSString 添加camelCaseString分类，使用camelCaseString方法，就可以去掉一个字符串中的空格，并将原有空格后的单词改写成大写(即将字符串转化为驼峰式)。<a id="more"></a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-</pre></td><td class="code"><pre><span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span></span>
-
-<span class="comment">/*
-定义分类的过程大致可分为以下几个步骤：
-	第一步、创建一个带有接口的新文件，即创建已有类
- 
-	第二步、在新文件中添加需要扩展的方法及方法的实现，即需要添加的分类
- */</span>
-<span class="comment">//NSString 表示将要添加分类的类名称，该类必须是已存在的。</span>
-<span class="comment">//CamelCase 是为类添加的方法名称。</span>
-<span class="comment">//只能添加方法，不能添加变量。</span>
-<span class="comment">//头文件命名惯例:ClassName+CategoryName.h</span>
-<span class="class"><span class="keyword">@interface</span> <span class="title">NSString</span> (<span class="title">CamelCase</span>)</span>
-
--(<span class="built_in">NSString</span>*) camelCaseString;
-
-<span class="keyword">@end</span>
-
-<span class="class"><span class="keyword">@implementation</span> <span class="title">NSString</span> (<span class="title">CamelCase</span>)</span>
-
--(<span class="built_in">NSString</span>*) camelCaseString
-{
-    <span class="comment">//调用NSString的内部方法获取驼峰字符串。</span>
-    <span class="comment">//self指向被添加分类的类。</span>
-    <span class="built_in">NSString</span> *castr = [<span class="keyword">self</span> capitalizedString];
-	
-    <span class="comment">//创建数组来过滤掉空格, 通过分隔符对字符进行组合。</span>
-    <span class="built_in">NSArray</span> *array = [castr componentsSeparatedByCharactersInSet:
-                      [NSCharacterSet whitespaceCharacterSet]];
-	
-    <span class="comment">//把数组的字符输出</span>
-    <span class="built_in">NSString</span> *output = @<span class="string">""</span>;
-    <span class="keyword">for</span>(<span class="built_in">NSString</span> *word in array)
-    {
-        output = [output stringByAppendingString:word];
-    }
-	
-    <span class="keyword">return</span> output;
-	
-}
-
-<span class="keyword">@end</span>
-<span class="keyword">int</span> main (<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[])
-{
-	
-    <span class="built_in">NSAutoreleasePool</span> * pool = [[<span class="built_in">NSAutoreleasePool</span> alloc] init];
-	
-    <span class="built_in">NSString</span> *str = @<span class="string">"My name is bill."</span>;
-    <span class="built_in">NSLog</span>(@<span class="string">"%@"</span>, str);
-    str = [str camelCaseString];
-    <span class="built_in">NSLog</span>(@<span class="string">"%@"</span>, str);
-	
-    [pool drain];
-    <span class="keyword">return</span> <span class="number">0</span>;
-}
+        <h2 id="-path">查看PATH</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$PATH</span>
 </pre></td></tr></table></figure>
 
-<h1 id="2-extension-">2、扩展(Extension)</h1>
-<p>关于扩展，你可以这样理解：扩展是一种匿名分类；但是和匿名分类不一样的是，扩展可以添加新的实例变量(是不是觉得扩展已经强大到非一般的地步了？ ^_^)
-从Xcode 4 之后就推荐在自定义类的.m文件中使用扩展,这样就能保证良好的代码封装性，避免把私有接口暴露给外面。
-下面是一个扩展的例子：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-</pre></td><td class="code"><pre><span class="class"><span class="keyword">@interface</span> <span class="title">MyClass</span> : <span class="title">NSObject</span></span>
-- (<span class="keyword">float</span>)value;
-<span class="keyword">@end</span>
- 
- 
-<span class="class"><span class="keyword">@interface</span> <span class="title">MyClass</span> () {</span> <span class="comment">//注意此处：扩展</span>
-    <span class="keyword">float</span> value;
-}
-- (<span class="keyword">void</span>)setValue:(<span class="keyword">float</span>)newValue;
-<span class="keyword">@end</span>
- 
-<span class="class"><span class="keyword">@implementation</span> <span class="title">MyClass</span></span>
- 
-- (<span class="keyword">float</span>)value {
-    <span class="keyword">return</span> value;
-}
- 
-- (<span class="keyword">void</span>)setValue:(<span class="keyword">float</span>)newValue {
-    value = newValue;
-}
- 
-<span class="keyword">@end</span>
+<h2 id="-path">设置PATH</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">echo</span> <span class="string">"export PATH=xxxxxx:<span class="variable">$PATH</span>"</span> &gt;&gt; ~/.bash_profile
 </pre></td></tr></table></figure>
 
 
@@ -258,13 +99,13 @@
         
   
   <div class="categories">
-    <a href="/categories/iOS/">iOS</a>
+    <a href="/categories/Tips/">Tips</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/iOS/">iOS</a>, <a href="/tags/category/">category</a>, <a href="/tags/extension/">extension</a>
+    <a href="/tags/Tips/">Tips</a>, <a href="/tags/Mac/">Mac</a>, <a href="/tags/OSX/">OSX</a>
   </div>
 
 <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></div>

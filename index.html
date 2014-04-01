@@ -72,6 +72,59 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-04-01T07:44:44.000Z"><a href="/2014/04/01/bash/">4月 1 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/04/01/bash/">bash</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="-path">查看PATH</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$PATH</span>
+</pre></td></tr></table></figure>
+
+<h2 id="-path">设置PATH</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">echo</span> <span class="string">"export PATH=xxxxxx:<span class="variable">$PATH</span>"</span> &gt;&gt; ~/.bash_profile
+</pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-03-10T03:40:40.000Z"><a href="/2014/03/10/use_instancetype/">3月 10 2014</a></time>
       
       
@@ -272,77 +325,6 @@
 
 
 
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-01-24T02:15:18.000Z"><a href="/2014/01/24/string1/">1月 24 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/01/24/string1/">(转)字符串是否包含问题</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/edit/master/ebook/zh/02.0.md" target="_blank">本文引用自此</a></p>
-</blockquote>
-<h2 id="-">字符串是否包含问题</h2>
-<h3 id="-">题目描述</h3>
-<p>假设这有两个分别由字母组成的字符串A另外字符串B，字符串B的字母数较字符串A少一些。什么方法能最快地查出字符串B所有字母是不是都在字符串A里？也就是说判断字符串B是不是字符串A的真子集（为了简化，姑且认为两个集合都不是空集，即字符串都不为空。）。为了简单起见，我们规定输入的字符串只包含大写英文字母。</p>
-<p>实现函数bool compare(string &amp;A,string &amp;B)</p>
-<p>比如，如果是下面两个字符串：</p>
-<p>String 1: ABCDEFGHLMNOPQRS</p>
-<p>String 2: DCGSRQPO</p>
-<p>答案是true，即String2里的字母在String1里也都有，或者说String2是String1的真子集。</p>
-<p>如果是下面两个字符串：</p>
-<p>String 1: ABCDEFGHLMNOPQRS</p>
-<p>String 2: DCGSRQPZ</p>
-<p>答案是false，因为字符串String2里的Z字母不在字符串String1里。</p>
-<p>点评：</p>
-<ol>
-<li><p>题目描述虽长，但题意很明了，就是给定一长一短的两个字符串A，B，假设A长B短，要求判断B是否包含在字符串A中，即B?(-A。</p>
-</li>
-<li><p>似乎简单，但实现起来并不轻松，且如果面试官步步紧逼，一个一个否决你能想到的方法，要你给出更好、最好的方案时，恐怕就要伤不少脑筋了。</p>
-</li>
-</ol>
-<p>在揭晓答案之前，读者最好先想一想，看看自己能想到的最好方案是什么，是否与本文作者所见略同。</p>
-<h3 id="-">解法一、暴力轮询</h3>
-<p>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/01/24/string1/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -364,7 +346,7 @@
   <h3 class="title">分类</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Tips/">Tips</a><small>4</small></li>
+    <li><a href="/categories/Tips/">Tips</a><small>5</small></li>
   
     <li><a href="/categories/iOS/">iOS</a><small>3</small></li>
   
@@ -386,6 +368,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2014/04/01/bash/">bash</a>
+      </li>
+    
+      <li>
         <a href="/2014/03/10/use_instancetype/">正确的使用instancetype代替id</a>
       </li>
     
@@ -399,10 +385,6 @@
     
       <li>
         <a href="/2014/01/28/ios7_chrome/">推荐一个Chrome扩展</a>
-      </li>
-    
-      <li>
-        <a href="/2014/01/24/string1/">(转)字符串是否包含问题</a>
       </li>
     
   </ul>
