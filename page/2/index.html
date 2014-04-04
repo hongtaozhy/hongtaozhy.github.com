@@ -72,6 +72,50 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-02-19T07:02:06.000Z"><a href="/2014/02/19/provisioning/">2月 19 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/02/19/provisioning/">Provisioning文件的存放地址</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="-library-mobiledevice-provisioning-profiles-"><code>~/Library/MobileDevice/Provisioning Profiles</code></h2>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-01-29T01:55:25.000Z"><a href="/2014/01/29/tools/">1月 29 2014</a></time>
       
       
@@ -281,131 +325,6 @@
 
 
 
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-01-08T03:12:17.000Z"><a href="/2014/01/08/keychain/">1月 8 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/01/08/keychain/">关于使用Keychain实现同一个发布证书下的数据共享</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="keychain-">Keychain是什么</h2>
-<p>Keychain是一种安全保存信息的服务，中文名应为钥匙串，MAC系统的钥匙串大家都熟悉，IOS也提供了KeyChain服务，
-关于IOS Keychain服务，很详细的内容见<a href="https://developer.apple.com/library/ios/documentation/Security/Conceptual/keychainServConcepts/iPhoneTasks/iPhoneTasks.html#//apple_ref/doc/uid/TP30000897-CH208-SW1" target="_blank">官方文档</a></p>
-<p>使用Keychain要导入Security.framework
-其中的API提供了<strong>增删改查</strong>的基本功能,如下</p>
-<ul>
-<li>SecItemCopyMatching</li>
-<li>SecItemAdd</li>
-<li>SecItemUpdate</li>
-<li>SecItemDelete</li>
-</ul>
-<p>我们还需要了解一个Keychain Item的结构:</p>
-<blockquote>
-<p>引用自<a href="http://www.cnblogs.com/v2m_/archive/2012/01/18/2325782.html" target="_blank">茫茫茫茫</a>
-<img src="http://pic002.cnblogs.com/images/2012/241349/2012011817085068.png" alt="KeychainItem">
-每一个keyChain的组成如图,整体是一个字典结构.
-1.kSecClass key 定义属于那一种类型的keyChain
-2.不同的类型包含不同的Attributes,这些attributes定义了这个item的具体信息
-3.每个item可以包含一个密码项来存储对应的密码</p>
-</blockquote>
-<h2 id="keychainitemwrapper">KeychainItemWrapper</h2>
-<p>官方提供了一个IOS上使用Keychain服务的<a href="https://developer.apple.com/library/ios/samplecode/GenericKeychain/Introduction/Intro.html#//apple_ref/doc/uid/DTS40007797" target="_blank">Demo</a>
-下载Demo代码后可以看到官方已经封装好了一个类<strong>KeychainItemWrapper</strong>
-我们要做的就是以这个类来实现一个Keychain的同组间程序的共享
-这个类提供了几个接口</p>
-<figure class="highlight objective-c"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="code"><pre><span class="comment">// Designated initializer.</span>
-- (<span class="keyword">id</span>)initWithIdentifier: (<span class="built_in">NSString</span> *)identifier accessGroup:(<span class="built_in">NSString</span> *) accessGroup;
-- (<span class="keyword">void</span>)setObject:(<span class="keyword">id</span>)inObject forKey:(<span class="keyword">id</span>)key;
-- (<span class="keyword">id</span>)objectForKey:(<span class="keyword">id</span>)key;
-
-<span class="comment">// Initializes and resets the default generic keychain item data.</span>
-- (<span class="keyword">void</span>)resetKeychainItem;
-</pre></td></tr></table></figure>
-
-<p>于是通过如上接口可以简单的实现一个存储读取Keychain内容，IDENTIFIER是为给存储的数据的标记（自定义一个为每一个item）</p>
-<figure class="highlight objective-c"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-</pre></td><td class="code"><pre><span class="preprocessor">#define ACCESSGROUP @"93KUDP1B3K.com.sina.sharekeychain"</span>
-<span class="preprocessor">#define IDENTIFIER  @"_test_key_chain_"</span>
-
-+ (<span class="built_in">NSString</span> *)readFromKeychain
-{
-    KeychainItemWrapper *keyChain = [[KeychainItemWrapper alloc] initWithIdentifier:IDENTIFIER accessGroup:ACCESSGROUP];
-    
-    <span class="built_in">NSString</span> *keychaindata = [keyChain objectForKey:(__bridge <span class="keyword">id</span>)(kSecValueData)];
-    <span class="keyword">return</span> keychaindata;
-}
-
-+ (<span class="keyword">void</span>)storeToKeychain:(<span class="built_in">NSString</span> *)password
-{
-    KeychainItemWrapper *keyChain = [[KeychainItemWrapper alloc] initWithIdentifier:IDENTIFIER accessGroup:ACCESSGROUP];
-    
-    [keyChain setObject:password forKey:(__bridge <span class="keyword">id</span>)kSecValueData];
-}
-</pre></td></tr></table></figure>
-
-<h2 id="-more-">出错的解决
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/01/08/keychain/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -429,7 +348,7 @@
   <h3 class="title">分类</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Tips/">Tips</a><small>6</small></li>
+    <li><a href="/categories/Tips/">Tips</a><small>7</small></li>
   
     <li><a href="/categories/iOS/">iOS</a><small>4</small></li>
   
@@ -451,6 +370,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2014/04/04/svnmerge/">SvnMerge</a>
+      </li>
+    
+      <li>
         <a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a>
       </li>
     
@@ -464,10 +387,6 @@
     
       <li>
         <a href="/2014/03/10/use_instancetype/">正确的使用instancetype代替id</a>
-      </li>
-    
-      <li>
-        <a href="/2014/02/19/provisioning/">Provisioning文件的存放地址</a>
       </li>
     
   </ul>
