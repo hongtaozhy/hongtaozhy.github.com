@@ -4,7 +4,7 @@
   <meta property="wb:webmaster" content="54c1f241b580a6e1" />
   <meta charset="utf-8">
   
-  <title>总结下最近用的工具 | Hadnot&#39;s blog</title>
+  <title>利用xcconfig来控制Xcode工程 | Hadnot&#39;s blog</title>
   <meta name="author" content="hongtaozhy">
   
   <meta name="description" content="blog,ios,cpp,程序员,工作,objective-c,oc">
@@ -12,7 +12,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="总结下最近用的工具"/>
+  <meta property="og:title" content="利用xcconfig来控制Xcode工程"/>
   <meta property="og:site_name" content="Hadnot&#39;s blog"/>
 
   
@@ -71,65 +71,48 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2014-01-29T01:55:25.000Z"><a href="/2014/01/29/tools/">1月 29 2014</a></time>
+        <time datetime="2014-04-04T05:41:30.000Z"><a href="/2014/04/04/xcconfig/">4月 4 2014</a></time>
       
       
   
-    <h1 class="title">总结下最近用的工具</h1>
+    <h1 class="title">利用xcconfig来控制Xcode工程</h1>
   
 
     </header>
     <div class="entry">
       
-        <h2 id="-">文本</h2>
-<ul>
-<li><a href="http://macromates.com/" target="_blank">TextMate</a></li>
-<li>Markdown</li>
-</ul>
-<h2 id="-">代码管理</h2>
-<ul>
-<li><a href="http://www.zennaware.com/cornerstone" target="_blank">Cornerstone</a></li>
-<li>Git/<a href="https://github.com/" target="_blank">GitHub</a>
-<a id="more"></a><h2 id="-">终端</h2>
+        <h2 id="xcconfig-">xcconfig文件是什么</h2>
+<p>xcconfig是一个保存xcode工程各种配置的纯文本文件,如果被使用,会覆盖掉相同的配置项,我们可以利用它进行管理工程使得同样的工程使用不同的预定义参数或编译期产生其他行为。</p>
+<h2 id="xcconfig-">xcconfig文件创建与设置使用</h2>
+<ol>
+<li><p>File-New-File...
+ <img src="http://ww2.sinaimg.cn/large/79379982tw1ef3ilvpz17j214g0ra43h.jpg" alt="创建xcconfig文件"></p>
 </li>
-<li><a href="http://www.iterm2.com/" target="_blank">iTerm</a></li>
-</ul>
-<h2 id="ios">IOS</h2>
-<ul>
-<li><a href="https://itunes.apple.com/cn/app/sui-shou-ji-ji-zhang-li-cai/id372353614?mt=8" target="_blank">随手记</a></li>
-<li><a href="https://itunes.apple.com/cn/app/zhi-fu-bao-qian-bao-yu-e-bao/id333206289?mt=8" target="_blank">支付宝钱包</a></li>
-<li><a href="https://itunes.apple.com/cn/app/kuai-de-da-che-da-che-shen-qi/id551963288?mt=8" target="_blank">快的打车</a></li>
-<li><a href="https://itunes.apple.com/cn/app/keynote/id361285480?mt=8" target="_blank">KeynoteRemote</a></li>
-<li><a href="https://itunes.apple.com/cn/app/codehub-github-for-ios/id707173885?mt=8" target="_blank">CodeHub</a></li>
-</ul>
-<h2 id="-">博客</h2>
-<ul>
-<li><a href="http://zespia.tw/hexo/" target="_blank">Hexo</a></li>
-<li><a href="https://code.google.com/p/google-code-prettify/" target="_blank">GooglePrettify</a></li>
-<li><a href="http://duoshuo.com/" target="_blank">多说</a></li>
-</ul>
-<h2 id="-">效率</h2>
-<ul>
-<li><a href="https://www.evernote.com/" target="_blank">Evernote</a></li>
-<li><a href="https://tower.im/" target="_blank">Tower</a></li>
-<li><a href="https://itunes.apple.com/cn/app/omniplan/id404656809?mt=12" target="_blank">OmniPlan</a></li>
-</ul>
-<h2 id="-">在线存储</h2>
-<ul>
-<li><a href="https://www.dropbox.com/" target="_blank">Dropbox</a></li>
-<li><a href="http://pan.baidu.com/download#pan" target="_blank">百度云盘</a></li>
-<li>iCloud</li>
-</ul>
-<h2 id="web">Web</h2>
-<ul>
-<li>Chrome</li>
-<li><a href="http://www.greenvpn.org/" target="_blank">GreenVpn</a></li>
-<li><a href="https://www.dnspod.cn/" target="_blank">DNSPod</a><h2 id="-">外卖</h2>
+<li><p>选择工程-选择Project-Info<br><img src="http://ww1.sinaimg.cn/large/79379982tw1ef3ilw85zzj20t00c4tas.jpg" alt="设置使用xcconfig文件"></p>
 </li>
-<li><a href="http://www.lihua.com/" target="_blank">丽华快餐</a></li>
-<li><a href="http://www.etaoshi.com/" target="_blank">易淘食</a></li>
-<li><a href="http://ele.me/" target="_blank">饿了么</a></li>
-</ul>
+<li><p>添加一行配置项,如</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>hongtaozhy = <span class="string">"Hadn_t"</span>
+</pre></td></tr></table></figure>
+</li>
+<li><p>我们就可以在Build Settings里看到如下的设置项了<br><img src="http://ww3.sinaimg.cn/mw1024/79379982tw1ef3j5hh5rvj20ry03umxd.jpg" alt="显示效果">    </p>
+</li>
+</ol>
+<h2 id="-">添加运行脚本使用设置项控制</h2>
+<ol>
+<li>File-New-File...
+<img src="http://ww2.sinaimg.cn/large/79379982tw1ef3ilwqe4fj214g0ra0xe.jpg" alt="创建Shell脚本文件">   </li>
+<li><p>写入一行脚本    </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">echo</span> <span class="variable">$hongtaozhy</span>
+</pre></td></tr></table></figure>
+</li>
+<li><p>添加使用脚本文件<br><img src="http://ww1.sinaimg.cn/large/79379982tw1ef3ilvgd9oj20qg0cm40s.jpg" alt="添加运行脚本"><br><img src="http://ww2.sinaimg.cn/large/79379982tw1ef3ilwip1bj212s0ccwg1.jpg" alt="设置使用Shell脚本">    </p>
+</li>
+</ol>
+<h2 id="-">我们的工程截图与运行结果在哪里查看</h2>
+<p><img src="http://ww4.sinaimg.cn/large/79379982tw1ef3ilwxrdtj20do03qdg3.jpg" alt="脚本和xcconfig文件如图">
+<img src="http://ww3.sinaimg.cn/large/79379982tw1ef3ilxa1xvj210g0euaei.jpg" alt="运行结果如图"></p>
 
       
     </div>
@@ -138,13 +121,13 @@
         
   
   <div class="categories">
-    <a href="/categories/Tips/">Tips</a>
+    <a href="/categories/iOS/">iOS</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/tools/">tools</a>
+    <a href="/tags/Tips/">Tips</a>, <a href="/tags/Mac/">Mac</a>, <a href="/tags/OSX/">OSX</a>
   </div>
 
 <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></div>

@@ -72,6 +72,81 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-04-04T05:41:30.000Z"><a href="/2014/04/04/xcconfig/">4月 4 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="xcconfig-">xcconfig文件是什么</h2>
+<p>xcconfig是一个保存xcode工程各种配置的纯文本文件,如果被使用,会覆盖掉相同的配置项,我们可以利用它进行管理工程使得同样的工程使用不同的预定义参数或编译期产生其他行为。</p>
+<h2 id="xcconfig-">xcconfig文件创建与设置使用</h2>
+<ol>
+<li><p>File-New-File...
+ <img src="http://ww2.sinaimg.cn/large/79379982tw1ef3ilvpz17j214g0ra43h.jpg" alt="创建xcconfig文件"></p>
+</li>
+<li><p>选择工程-选择Project-Info<br><img src="http://ww1.sinaimg.cn/large/79379982tw1ef3ilw85zzj20t00c4tas.jpg" alt="设置使用xcconfig文件"></p>
+</li>
+<li><p>添加一行配置项,如</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>hongtaozhy = <span class="string">"Hadn_t"</span>
+</pre></td></tr></table></figure>
+</li>
+<li><p>我们就可以在Build Settings里看到如下的设置项了<br><img src="http://ww3.sinaimg.cn/mw1024/79379982tw1ef3j5hh5rvj20ry03umxd.jpg" alt="显示效果">    </p>
+</li>
+</ol>
+<h2 id="-">添加运行脚本使用设置项控制</h2>
+<ol>
+<li>File-New-File...
+<img src="http://ww2.sinaimg.cn/large/79379982tw1ef3ilwqe4fj214g0ra0xe.jpg" alt="创建Shell脚本文件">   </li>
+<li><p>写入一行脚本    </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">echo</span> <span class="variable">$hongtaozhy</span>
+</pre></td></tr></table></figure>
+</li>
+<li><p>添加使用脚本文件<br><img src="http://ww1.sinaimg.cn/large/79379982tw1ef3ilvgd9oj20qg0cm40s.jpg" alt="添加运行脚本"><br><img src="http://ww2.sinaimg.cn/large/79379982tw1ef3ilwip1bj212s0ccwg1.jpg" alt="设置使用Shell脚本">    </p>
+</li>
+</ol>
+<h2 id="-">我们的工程截图与运行结果在哪里查看</h2>
+<p><img src="http://ww4.sinaimg.cn/large/79379982tw1ef3ilwxrdtj20do03qdg3.jpg" alt="脚本和xcconfig文件如图">
+<img src="http://ww3.sinaimg.cn/large/79379982tw1ef3ilxa1xvj210g0euaei.jpg" alt="运行结果如图"></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-04-04T04:09:16.000Z"><a href="/2014/04/04/alias/">4月 4 2014</a></time>
       
       
@@ -274,62 +349,6 @@
 
 
 
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-01-29T01:55:25.000Z"><a href="/2014/01/29/tools/">1月 29 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/01/29/tools/">总结下最近用的工具</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="-">文本</h2>
-<ul>
-<li><a href="http://macromates.com/" target="_blank">TextMate</a></li>
-<li>Markdown</li>
-</ul>
-<h2 id="-">代码管理</h2>
-<ul>
-<li><a href="http://www.zennaware.com/cornerstone" target="_blank">Cornerstone</a></li>
-<li>Git/<a href="https://github.com/" target="_blank">GitHub</a>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/01/29/tools/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -353,7 +372,7 @@
   
     <li><a href="/categories/Tips/">Tips</a><small>6</small></li>
   
-    <li><a href="/categories/iOS/">iOS</a><small>3</small></li>
+    <li><a href="/categories/iOS/">iOS</a><small>4</small></li>
   
     <li><a href="/categories/markdown/">markdown</a><small>1</small></li>
   
@@ -373,6 +392,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a>
+      </li>
+    
+      <li>
         <a href="/2014/04/04/alias/">alias</a>
       </li>
     
@@ -386,10 +409,6 @@
     
       <li>
         <a href="/2014/02/19/provisioning/">Provisioning文件的存放地址</a>
-      </li>
-    
-      <li>
-        <a href="/2014/01/29/tools/">总结下最近用的工具</a>
       </li>
     
   </ul>
