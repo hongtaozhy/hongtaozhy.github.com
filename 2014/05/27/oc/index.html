@@ -4,7 +4,7 @@
   <meta property="wb:webmaster" content="54c1f241b580a6e1" />
   <meta charset="utf-8">
   
-  <title>SVN Merge分支代码提交 | Hadnot&#39;s blog</title>
+  <title>objective-c代码行数统计 | Hadnot&#39;s blog</title>
   <meta name="author" content="hongtaozhy">
   
   <meta name="description" content="blog,ios,cpp,程序员,工作,objective-c,oc">
@@ -12,7 +12,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="SVN Merge分支代码提交"/>
+  <meta property="og:title" content="objective-c代码行数统计"/>
   <meta property="og:site_name" content="Hadnot&#39;s blog"/>
 
   
@@ -71,22 +71,32 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2014-05-16T07:51:35.000Z"><a href="/2014/05/16/svnmerge-1/">5月 16 2014</a></time>
+        <time datetime="2014-05-27T05:42:08.000Z"><a href="/2014/05/27/oc/">5月 27 2014</a></time>
       
       
   
-    <h1 class="title">SVN Merge分支代码提交</h1>
+    <h1 class="title">objective-c代码行数统计</h1>
   
 
     </header>
     <div class="entry">
       
-        <figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre><span class="preprocessor">#将从svn1远程分支中N-M版本号之间中的改变提交至当前目录SVN本地库</span>
-svn merge -r N:M https:<span class="comment">//svn1</span>
+        <blockquote>
+<p>转自 <a href="http://blog.csdn.net/wide288/article/details/18180265" target="_blank">http://blog.csdn.net/wide288/article/details/18180265</a></p>
+</blockquote>
+<p>如果要统计ios开发代码，包括头文件的，终端命令进入项目目录下，命令如下</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>find <span class="built_in">.</span> <span class="attribute">-name</span> <span class="string">"*.m"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.h"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.xib"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.c"</span> <span class="subst">|</span>xargs wc <span class="attribute">-l</span>
 </pre></td></tr></table></figure>
 
+<p>列出每个文件的行数</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>find <span class="built_in">.</span> <span class="attribute">-name</span> <span class="string">"*.m"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.h"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.xib"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.c"</span> <span class="subst">|</span>xargs grep <span class="attribute">-v</span> <span class="string">"^$"</span><span class="subst">|</span>wc <span class="attribute">-l</span>
+</pre></td></tr></table></figure>
+
+<p>列出代码行数总和</p>
+<p>grep -v &quot;^$&quot;是去掉空行
+注释也统计在代码量之内，毕竟也一个字一个字码出来的</p>
 
       
     </div>
@@ -101,7 +111,7 @@ svn merge -r N:M https:<span class="comment">//svn1</span>
         
   
   <div class="tags">
-    <a href="/tags/Tips/">Tips</a>, <a href="/tags/Mac/">Mac</a>, <a href="/tags/OSX/">OSX</a>
+    <a href="/tags/Tips/">Tips</a>, <a href="/tags/iOS/">iOS</a>, <a href="/tags/OSX/">OSX</a>
   </div>
 
 <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></div>

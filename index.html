@@ -72,6 +72,65 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-05-27T05:42:08.000Z"><a href="/2014/05/27/oc/">5月 27 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/05/27/oc/">objective-c代码行数统计</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<p>转自 <a href="http://blog.csdn.net/wide288/article/details/18180265" target="_blank">http://blog.csdn.net/wide288/article/details/18180265</a></p>
+</blockquote>
+<p>如果要统计ios开发代码，包括头文件的，终端命令进入项目目录下，命令如下</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>find <span class="built_in">.</span> <span class="attribute">-name</span> <span class="string">"*.m"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.h"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.xib"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.c"</span> <span class="subst">|</span>xargs wc <span class="attribute">-l</span>
+</pre></td></tr></table></figure>
+
+<p>列出每个文件的行数</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>find <span class="built_in">.</span> <span class="attribute">-name</span> <span class="string">"*.m"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.h"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.xib"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.c"</span> <span class="subst">|</span>xargs grep <span class="attribute">-v</span> <span class="string">"^$"</span><span class="subst">|</span>wc <span class="attribute">-l</span>
+</pre></td></tr></table></figure>
+
+<p>列出代码行数总和</p>
+<p>grep -v &quot;^$&quot;是去掉空行
+注释也统计在代码量之内，毕竟也一个字一个字码出来的</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-05-16T07:51:35.000Z"><a href="/2014/05/16/svnmerge-1/">5月 16 2014</a></time>
       
       
@@ -266,58 +325,6 @@ svn merge -r axxx:bxxx xxxx.xx
 
 
 
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-04-04T04:09:16.000Z"><a href="/2014/04/04/alias/">4月 4 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/04/04/alias/">alias</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="-sublime-">设置别名，用于快速使用命令，如快速打开Sublime等</h2>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre><span class="keyword">alias</span> subl=<span class="attribute">'open</span> -a <span class="string">"Sublime Text"</span>'
-<span class="keyword">alias</span> finder=<span class="attribute">'open</span> -a finder'
-</pre></td></tr></table></figure>
-
-<h3 id="-">将其设置为环境变量，无需每次设置别名</h3>
-<p>把上述命令填写到.bash_profile文件即可</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -339,7 +346,7 @@ svn merge -r axxx:bxxx xxxx.xx
   <h3 class="title">分类</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Tips/">Tips</a><small>9</small></li>
+    <li><a href="/categories/Tips/">Tips</a><small>10</small></li>
   
     <li><a href="/categories/iOS/">iOS</a><small>4</small></li>
   
@@ -361,6 +368,10 @@ svn merge -r axxx:bxxx xxxx.xx
   <ul class="entry">
     
       <li>
+        <a href="/2014/05/27/oc/">objective-c代码行数统计</a>
+      </li>
+    
+      <li>
         <a href="/2014/05/16/svnmerge-1/">SVN Merge分支代码提交</a>
       </li>
     
@@ -374,10 +385,6 @@ svn merge -r axxx:bxxx xxxx.xx
     
       <li>
         <a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/04/alias/">alias</a>
       </li>
     
   </ul>
