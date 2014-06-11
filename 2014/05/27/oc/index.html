@@ -1,244 +1,240 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta property="wb:webmaster" content="54c1f241b580a6e1" />
   <meta charset="utf-8">
   
-  <title>objective-c代码行数统计 | Hadnot&#39;s blog</title>
-  <meta name="author" content="hongtaozhy">
-  
-  <meta name="description" content="blog,ios,cpp,程序员,工作,objective-c,oc">
-  
-  
+  <title>objective-c代码行数统计 | Hadn_t</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&#x8F6C;&#x81EA; http://blog.csdn.net/wide288/article/details/18180265
 
-  <meta property="og:title" content="objective-c代码行数统计"/>
-  <meta property="og:site_name" content="Hadnot&#39;s blog"/>
+&#x5982;&#x679C;&#x8981;&#x7EDF;&#x8BA1;ios&#x5F00;&#x53D1;&#x4EE3;&#x7801;&#xFF0C;&#x5305;&#x62EC;&#x5934;&#x6587;&#x4EF6;&#x7">
+<meta property="og:type" content="article">
+<meta property="og:title" content="objective-c代码行数统计">
+<meta property="og:url" content="http://www.hongtaozhy.com//2014/05/27/oc/">
+<meta property="og:site_name" content="Hadn_t">
+<meta property="og:description" content="&#x8F6C;&#x81EA; http://blog.csdn.net/wide288/article/details/18180265
 
+&#x5982;&#x679C;&#x8981;&#x7EDF;&#x8BA1;ios&#x5F00;&#x53D1;&#x4EE3;&#x7801;&#xFF0C;&#x5305;&#x62EC;&#x5934;&#x6587;&#x4EF6;&#x7">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="objective-c代码行数统计">
+<meta name="twitter:description" content="&#x8F6C;&#x81EA; http://blog.csdn.net/wide288/article/details/18180265
+
+&#x5982;&#x679C;&#x8981;&#x7EDF;&#x8BA1;ios&#x5F00;&#x53D1;&#x4EE3;&#x7801;&#xFF0C;&#x5305;&#x62EC;&#x5934;&#x6587;&#x4EF6;&#x7">
   
-    <meta property="og:image" content="undefined"/>
   
+    <link rel="icon" href="/favicon.ico">
   
-  <link href="/favicon.ico" rel="icon" type="image/x-ico">
-  <link rel="alternate" href="/atom.xml" title="Hadnot&#39;s blog" type="application/atom+xml">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <!--  -->
-  
-  <link rel="stylesheet" href="/css/prettify_raytaylorism.css" type="text/css">
-  <link rel="stylesheet" href="/css/style.css?ver=3" media="screen" type="text/css">
+  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/duoshuo_style.css?ver=5" media="screen" type="text/css">
-  
-  <script type="text/javascript" src="/js/prettify.js"></script>
-  <script type="text/javascript" src="/js/jquery-2.0.3.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 </head>
-
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Hadnot&#39;s blog</a></h1>
-  <h2><a href="/">www.hongtaozhy.com</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">首页</a></li>
-    
-      <li><a href="/archives">存档</a></li>
-    
-      <li><a href="/about">关于</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hadn_t</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">精通Symbian/Android/iOS等手机平台的最新贴膜技术</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">存档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://www.hongtaozhy.com/"></form>
+      </div>
+    </div>
   </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-oc" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/05/27/oc/" class="article-date">
+  <time datetime="2014-05-27T05:42:08.000Z" itemprop="datePublished">May 27 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tips/">Tips</a>
   </div>
-</div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-05-27T05:42:08.000Z"><a href="/2014/05/27/oc/">5月 27 2014</a></time>
-      
-      
-  
-    <h1 class="title">objective-c代码行数统计</h1>
+    <h1 class="article-title" itemprop="name">
+      objective-c代码行数统计
+    </h1>
   
 
-    </header>
-    <div class="entry">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>转自 <a href="http://blog.csdn.net/wide288/article/details/18180265" target="_blank">http://blog.csdn.net/wide288/article/details/18180265</a></p>
+<p>&#x8F6C;&#x81EA; <a href="http://blog.csdn.net/wide288/article/details/18180265" target="_blank" rel="external">http://blog.csdn.net/wide288/article/details/18180265</a></p>
 </blockquote>
-<p>如果要统计ios开发代码，包括头文件的，终端命令进入项目目录下，命令如下</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>find <span class="built_in">.</span> <span class="attribute">-name</span> <span class="string">"*.m"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.h"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.xib"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.c"</span> <span class="subst">|</span>xargs wc <span class="attribute">-l</span>
-</pre></td></tr></table></figure>
-
-<p>列出每个文件的行数</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>find <span class="built_in">.</span> <span class="attribute">-name</span> <span class="string">"*.m"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.h"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.xib"</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">"*.c"</span> <span class="subst">|</span>xargs grep <span class="attribute">-v</span> <span class="string">"^$"</span><span class="subst">|</span>wc <span class="attribute">-l</span>
-</pre></td></tr></table></figure>
-
-<p>列出代码行数总和</p>
-<p>grep -v &quot;^$&quot;是去掉空行
-注释也统计在代码量之内，毕竟也一个字一个字码出来的</p>
+<p>&#x5982;&#x679C;&#x8981;&#x7EDF;&#x8BA1;ios&#x5F00;&#x53D1;&#x4EE3;&#x7801;&#xFF0C;&#x5305;&#x62EC;&#x5934;&#x6587;&#x4EF6;&#x7684;&#xFF0C;&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>find <span class="built_in">.</span> <span class="attribute">-name</span> <span class="string">&quot;*.m&quot;</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">&quot;*.h&quot;</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">&quot;*.xib&quot;</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">&quot;*.c&quot;</span> <span class="subst">|</span>xargs wc <span class="attribute">-l</span>
+</pre></td></tr></table></figure><br>&#x5217;&#x51FA;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x884C;&#x6570;</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>find <span class="built_in">.</span> <span class="attribute">-name</span> <span class="string">&quot;*.m&quot;</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">&quot;*.h&quot;</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">&quot;*.xib&quot;</span> <span class="attribute">-or</span> <span class="attribute">-name</span> <span class="string">&quot;*.c&quot;</span> <span class="subst">|</span>xargs grep <span class="attribute">-v</span> <span class="string">&quot;^$&quot;</span><span class="subst">|</span>wc <span class="attribute">-l</span>
+</pre></td></tr></table></figure><br>&#x5217;&#x51FA;&#x4EE3;&#x7801;&#x884C;&#x6570;&#x603B;&#x548C;</p>
+<p>grep -v &#x201C;^$&#x201D;&#x662F;&#x53BB;&#x6389;&#x7A7A;&#x884C;<br>&#x6CE8;&#x91CA;&#x4E5F;&#x7EDF;&#x8BA1;&#x5728;&#x4EE3;&#x7801;&#x91CF;&#x4E4B;&#x5185;&#xFF0C;&#x6BD5;&#x7ADF;&#x4E5F;&#x4E00;&#x4E2A;&#x5B57;&#x4E00;&#x4E2A;&#x5B57;&#x7801;&#x51FA;&#x6765;&#x7684;</p>
 
       
     </div>
-    <footer>
+    <footer class="article-footer">
+      <a data-url="http://www.hongtaozhy.com/2014/05/27/oc/" data-id="e3potqgyy8sf1419" class="article-share-link">Share</a>
       
-        
-  
-  <div class="categories">
-    <a href="/categories/Tips/">Tips</a>
-  </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/Tips/">Tips</a>, <a href="/tags/iOS/">iOS</a>, <a href="/tags/OSX/">OSX</a>
-  </div>
-
-<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];</script>
-
       
-      <div class="clearfix"></div>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OSX/">OSX</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tips/">Tips</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2014/05/16/svnmerge-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SVN Merge分支代码提交</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
-<section id="comment">
+<section id="comments">
   <!-- Duoshuo Comment BEGIN -->
-  	<div class="ds-thread"></div>
+    <div class="ds-thread"></div>
   <script type="text/javascript">
   var duoshuoQuery = {short_name:"hongtaozhy"};
-  	(function() {
-  		var ds = document.createElement('script');
-  		ds.type = 'text/javascript';ds.async = true;
-  		ds.src = 'http://static.duoshuo.com/embed.js';
-  		ds.charset = 'UTF-8';
-  		(document.getElementsByTagName('head')[0] 
-  		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-  	})();
-  	</script>
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = 'http://static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
   <!-- Duoshuo Comment END -->
 </section>
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:www.hongtaozhy.com">
-  </form>
-</div>
-
-  
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/Tips/">Tips</a><small>10</small></li>
-  
-    <li><a href="/categories/iOS/">iOS</a><small>4</small></li>
-  
-    <li><a href="/categories/markdown/">markdown</a><small>1</small></li>
-  
-    <li><a href="/categories/人生/">人生</a><small>2</small></li>
-  
-    <li><a href="/categories/算法/">算法</a><small>1</small></li>
-  
-  </ul>
-</div>
-
-
-  <iframe width="100%" height="650" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=650&fansRow=3&ptype=1&speed=50&skin=4&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2033686914&verifier=e0a18d12&dpc=1"></iframe>
-
-  
-<div class="widget tag">
-  <h3 class="title">最新文章</h3>
-  <ul class="entry">
-    
-      <li>
-        <a href="/2014/05/27/oc/">objective-c代码行数统计</a>
-      </li>
-    
-      <li>
-        <a href="/2014/05/16/svnmerge-1/">SVN Merge分支代码提交</a>
-      </li>
-    
-      <li>
-        <a href="/2014/05/16/mnq/">iOS模拟器路径</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/04/svnmerge/">SVN回滚代码</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a>
-      </li>
-    
-  </ul>
-</div>
-
-
-  <div class="widget tag">
-<h3 class="title">友情链接</h3>
-<ul class="entry">
-<li><a href="http://www.cppblog.com/wicbnu" title="从零开始"></a>wicbnu</li>
-<li><a href="http://woyaowenzi.github.io/" title="WOYAOWENZI's blog">WOYAOWENZI's blog</a></li>
-<li><a href="http://huangliangjie.gitcafe.com/" title="Liangjie's hexo site">Liangjie's hexo site</a></li>
-<li><a href="http://waysnotes.com/" title="WaysNotes">WaysNotes</a></li>
-</ul>
-</div>
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2014 hongtaozhy
-  
-</div>
-<div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("pre").addClass("prettyprint");
-        $("code").addClass("prettyprint");
+</section>
         
-        prettyPrint();
-    });
-</script>  
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/人生/">人生</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04">April 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01">January 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12">December 2013</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/05/27/oc/">objective-c代码行数统计</a>
+          </li>
+        
+          <li>
+            <a href="/2014/05/16/svnmerge-1/">SVN Merge分支代码提交</a>
+          </li>
+        
+          <li>
+            <a href="/2014/05/16/mnq/">iOS模拟器路径</a>
+          </li>
+        
+          <li>
+            <a href="/2014/04/04/svnmerge/">SVN回滚代码</a>
+          </li>
+        
+          <li>
+            <a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    <iframe width="100%" height="650" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=650&fansRow=3&ptype=1&speed=50&skin=4&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2033686914&verifier=e0a18d12&dpc=1"></iframe>
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Hadn_t<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">存档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
 
+
+<script type="text/javascript" src="/js/script.js"></script>
+  </div>
 </body>
 </html>

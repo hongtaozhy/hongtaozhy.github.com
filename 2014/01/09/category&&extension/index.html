@@ -1,93 +1,107 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta property="wb:webmaster" content="54c1f241b580a6e1" />
   <meta charset="utf-8">
   
-  <title>(转)Objective-C分类 (category)和扩展(Extension) | Hadnot&#39;s blog</title>
-  <meta name="author" content="hongtaozhy">
-  
-  <meta name="description" content="blog,ios,cpp,程序员,工作,objective-c,oc">
-  
-  
+  <title>(转)Objective-C分类 (category)和扩展(Extension) | Hadn_t</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&#x3010;&#x539F;&#x6587;&#x5730;&#x5740;&#x3011;
 
-  <meta property="og:title" content="(转)Objective-C分类 (category)和扩展(Extension)"/>
-  <meta property="og:site_name" content="Hadnot&#39;s blog"/>
+1&#x3001;&#x5206;&#x7C7B;(category)
+&#x4F7F;&#x7528;Object-C&#x4E2D;&#x7684;&#x5206;&#x7C7B;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7F16;&#x8BD1;&#x65F6;&">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(转)Objective-C分类 (category)和扩展(Extension)">
+<meta property="og:url" content="http://www.hongtaozhy.com//2014/01/09/category&&extension/">
+<meta property="og:site_name" content="Hadn_t">
+<meta property="og:description" content="&#x3010;&#x539F;&#x6587;&#x5730;&#x5740;&#x3011;
 
+1&#x3001;&#x5206;&#x7C7B;(category)
+&#x4F7F;&#x7528;Object-C&#x4E2D;&#x7684;&#x5206;&#x7C7B;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7F16;&#x8BD1;&#x65F6;&">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(转)Objective-C分类 (category)和扩展(Extension)">
+<meta name="twitter:description" content="&#x3010;&#x539F;&#x6587;&#x5730;&#x5740;&#x3011;
+
+1&#x3001;&#x5206;&#x7C7B;(category)
+&#x4F7F;&#x7528;Object-C&#x4E2D;&#x7684;&#x5206;&#x7C7B;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7F16;&#x8BD1;&#x65F6;&">
   
-    <meta property="og:image" content="undefined"/>
   
+    <link rel="icon" href="/favicon.ico">
   
-  <link href="/favicon.ico" rel="icon" type="image/x-ico">
-  <link rel="alternate" href="/atom.xml" title="Hadnot&#39;s blog" type="application/atom+xml">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <!--  -->
-  
-  <link rel="stylesheet" href="/css/prettify_raytaylorism.css" type="text/css">
-  <link rel="stylesheet" href="/css/style.css?ver=3" media="screen" type="text/css">
+  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/duoshuo_style.css?ver=5" media="screen" type="text/css">
-  
-  <script type="text/javascript" src="/js/prettify.js"></script>
-  <script type="text/javascript" src="/js/jquery-2.0.3.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 </head>
-
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Hadnot&#39;s blog</a></h1>
-  <h2><a href="/">www.hongtaozhy.com</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">首页</a></li>
-    
-      <li><a href="/archives">存档</a></li>
-    
-      <li><a href="/about">关于</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hadn_t</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">精通Symbian/Android/iOS等手机平台的最新贴膜技术</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">存档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://www.hongtaozhy.com/"></form>
+      </div>
+    </div>
   </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-category&amp;&amp;extension" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/01/09/category&&extension/" class="article-date">
+  <time datetime="2014-01-09T08:24:55.000Z" itemprop="datePublished">Jan 9 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
   </div>
-</div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-01-09T08:24:55.000Z"><a href="/2014/01/09/category&&extension/">1月 9 2014</a></time>
-      
-      
-  
-    <h1 class="title">(转)Objective-C分类 (category)和扩展(Extension)</h1>
+    <h1 class="article-title" itemprop="name">
+      (转)Objective-C分类 (category)和扩展(Extension)
+    </h1>
   
 
-    </header>
-    <div class="entry">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p><a href="http://blog.csdn.net/yhawaii/article/details/6992094" target="_blank">【原文地址】</a></p>
+<p><a href="http://blog.csdn.net/yhawaii/article/details/6992094" target="_blank" rel="external">&#x3010;&#x539F;&#x6587;&#x5730;&#x5740;&#x3011;</a></p>
 </blockquote>
-<h1 id="1-category-">1、分类(category)</h1>
-<p>使用Object-C中的分类，是一种编译时的手段，允许我们通过给一个类添加方法来扩充它（但是通过category不能添加新的实例变量），并且我们不需要访问类中的代码就可以做到，这点和javascript中使用原型来定义属性有点类似。
-我们可以为一个类创建一个新的方法，而不需要在代码中编辑类定义。
-下面就是定义并使用分类的例子程序，通过下面代码，我们可以给Object-C中的NSString 添加camelCaseString分类，使用camelCaseString方法，就可以去掉一个字符串中的空格，并将原有空格后的单词改写成大写(即将字符串转化为驼峰式)。<a id="more"></a></p>
+<h1 id="1&#x3001;&#x5206;&#x7C7B;(category)">1&#x3001;&#x5206;&#x7C7B;(category)</h1>
+<p>&#x4F7F;&#x7528;Object-C&#x4E2D;&#x7684;&#x5206;&#x7C7B;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7F16;&#x8BD1;&#x65F6;&#x7684;&#x624B;&#x6BB5;&#xFF0C;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x7ED9;&#x4E00;&#x4E2A;&#x7C7B;&#x6DFB;&#x52A0;&#x65B9;&#x6CD5;&#x6765;&#x6269;&#x5145;&#x5B83;&#xFF08;&#x4F46;&#x662F;&#x901A;&#x8FC7;category&#x4E0D;&#x80FD;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x7C7B;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#xFF0C;&#x8FD9;&#x70B9;&#x548C;javascript&#x4E2D;&#x4F7F;&#x7528;&#x539F;&#x578B;&#x6765;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x3002;<br>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E3A;&#x4E00;&#x4E2A;&#x7C7B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x7F16;&#x8F91;&#x7C7B;&#x5B9A;&#x4E49;&#x3002;<br>&#x4E0B;&#x9762;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x5E76;&#x4F7F;&#x7528;&#x5206;&#x7C7B;&#x7684;&#x4F8B;&#x5B50;&#x7A0B;&#x5E8F;&#xFF0C;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7ED9;Object-C&#x4E2D;&#x7684;NSString &#x6DFB;&#x52A0;camelCaseString&#x5206;&#x7C7B;&#xFF0C;&#x4F7F;&#x7528;camelCaseString&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x53BB;&#x6389;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#xFF0C;&#x5E76;&#x5C06;&#x539F;&#x6709;&#x7A7A;&#x683C;&#x540E;&#x7684;&#x5355;&#x8BCD;&#x6539;&#x5199;&#x6210;&#x5927;&#x5199;(&#x5373;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5316;&#x4E3A;&#x9A7C;&#x5CF0;&#x5F0F;)&#x3002;<a id="more"></a></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -146,15 +160,15 @@
 </pre></td><td class="code"><pre><span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span></span>
 
 <span class="comment">/*
-定义分类的过程大致可分为以下几个步骤：
-	第一步、创建一个带有接口的新文件，即创建已有类
+&#x5B9A;&#x4E49;&#x5206;&#x7C7B;&#x7684;&#x8FC7;&#x7A0B;&#x5927;&#x81F4;&#x53EF;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;
+	&#x7B2C;&#x4E00;&#x6B65;&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x63A5;&#x53E3;&#x7684;&#x65B0;&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x521B;&#x5EFA;&#x5DF2;&#x6709;&#x7C7B;
  
-	第二步、在新文件中添加需要扩展的方法及方法的实现，即需要添加的分类
+	&#x7B2C;&#x4E8C;&#x6B65;&#x3001;&#x5728;&#x65B0;&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x9700;&#x8981;&#x6269;&#x5C55;&#x7684;&#x65B9;&#x6CD5;&#x53CA;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5373;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x7684;&#x5206;&#x7C7B;
  */</span>
-<span class="comment">//NSString 表示将要添加分类的类名称，该类必须是已存在的。</span>
-<span class="comment">//CamelCase 是为类添加的方法名称。</span>
-<span class="comment">//只能添加方法，不能添加变量。</span>
-<span class="comment">//头文件命名惯例:ClassName+CategoryName.h</span>
+<span class="comment">//NSString &#x8868;&#x793A;&#x5C06;&#x8981;&#x6DFB;&#x52A0;&#x5206;&#x7C7B;&#x7684;&#x7C7B;&#x540D;&#x79F0;&#xFF0C;&#x8BE5;&#x7C7B;&#x5FC5;&#x987B;&#x662F;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x3002;</span>
+<span class="comment">//CamelCase &#x662F;&#x4E3A;&#x7C7B;&#x6DFB;&#x52A0;&#x7684;&#x65B9;&#x6CD5;&#x540D;&#x79F0;&#x3002;</span>
+<span class="comment">//&#x53EA;&#x80FD;&#x6DFB;&#x52A0;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x80FD;&#x6DFB;&#x52A0;&#x53D8;&#x91CF;&#x3002;</span>
+<span class="comment">//&#x5934;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x60EF;&#x4F8B;:ClassName+CategoryName.h</span>
 <span class="class"><span class="keyword">@interface</span> <span class="title">NSString</span> (<span class="title">CamelCase</span>)</span>
 
 -(<span class="built_in">NSString</span>*) camelCaseString;
@@ -165,16 +179,16 @@
 
 -(<span class="built_in">NSString</span>*) camelCaseString
 {
-    <span class="comment">//调用NSString的内部方法获取驼峰字符串。</span>
-    <span class="comment">//self指向被添加分类的类。</span>
+    <span class="comment">//&#x8C03;&#x7528;NSString&#x7684;&#x5185;&#x90E8;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x9A7C;&#x5CF0;&#x5B57;&#x7B26;&#x4E32;&#x3002;</span>
+    <span class="comment">//self&#x6307;&#x5411;&#x88AB;&#x6DFB;&#x52A0;&#x5206;&#x7C7B;&#x7684;&#x7C7B;&#x3002;</span>
     <span class="built_in">NSString</span> *castr = [<span class="keyword">self</span> capitalizedString];
 	
-    <span class="comment">//创建数组来过滤掉空格, 通过分隔符对字符进行组合。</span>
+    <span class="comment">//&#x521B;&#x5EFA;&#x6570;&#x7EC4;&#x6765;&#x8FC7;&#x6EE4;&#x6389;&#x7A7A;&#x683C;, &#x901A;&#x8FC7;&#x5206;&#x9694;&#x7B26;&#x5BF9;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x7EC4;&#x5408;&#x3002;</span>
     <span class="built_in">NSArray</span> *array = [castr componentsSeparatedByCharactersInSet:
                       [NSCharacterSet whitespaceCharacterSet]];
 	
-    <span class="comment">//把数组的字符输出</span>
-    <span class="built_in">NSString</span> *output = @<span class="string">""</span>;
+    <span class="comment">//&#x628A;&#x6570;&#x7EC4;&#x7684;&#x5B57;&#x7B26;&#x8F93;&#x51FA;</span>
+    <span class="built_in">NSString</span> *output = @<span class="string">&quot;&quot;</span>;
     <span class="keyword">for</span>(<span class="built_in">NSString</span> *word in array)
     {
         output = [output stringByAppendingString:word];
@@ -190,21 +204,15 @@
 	
     <span class="built_in">NSAutoreleasePool</span> * pool = [[<span class="built_in">NSAutoreleasePool</span> alloc] init];
 	
-    <span class="built_in">NSString</span> *str = @<span class="string">"My name is bill."</span>;
-    <span class="built_in">NSLog</span>(@<span class="string">"%@"</span>, str);
+    <span class="built_in">NSString</span> *str = @<span class="string">&quot;My name is bill.&quot;</span>;
+    <span class="built_in">NSLog</span>(@<span class="string">&quot;%@&quot;</span>, str);
     str = [str camelCaseString];
-    <span class="built_in">NSLog</span>(@<span class="string">"%@"</span>, str);
+    <span class="built_in">NSLog</span>(@<span class="string">&quot;%@&quot;</span>, str);
 	
     [pool drain];
     <span class="keyword">return</span> <span class="number">0</span>;
 }
-</pre></td></tr></table></figure>
-
-<h1 id="2-extension-">2、扩展(Extension)</h1>
-<p>关于扩展，你可以这样理解：扩展是一种匿名分类；但是和匿名分类不一样的是，扩展可以添加新的实例变量(是不是觉得扩展已经强大到非一般的地步了？ ^_^)
-从Xcode 4 之后就推荐在自定义类的.m文件中使用扩展,这样就能保证良好的代码封装性，避免把私有接口暴露给外面。
-下面是一个扩展的例子：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre>1
+</pre></td></tr></table></figure><br>#2&#x3001;&#x6269;&#x5C55;(Extension)<br><br>&#x5173;&#x4E8E;&#x6269;&#x5C55;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x7406;&#x89E3;&#xFF1A;&#x6269;&#x5C55;&#x662F;&#x4E00;&#x79CD;&#x533F;&#x540D;&#x5206;&#x7C7B;&#xFF1B;&#x4F46;&#x662F;&#x548C;&#x533F;&#x540D;&#x5206;&#x7C7B;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x662F;&#xFF0C;&#x6269;&#x5C55;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;(&#x662F;&#x4E0D;&#x662F;&#x89C9;&#x5F97;&#x6269;&#x5C55;&#x5DF2;&#x7ECF;&#x5F3A;&#x5927;&#x5230;&#x975E;&#x4E00;&#x822C;&#x7684;&#x5730;&#x6B65;&#x4E86;&#xFF1F; ^_^)<br>&#x4ECE;Xcode 4 &#x4E4B;&#x540E;&#x5C31;&#x63A8;&#x8350;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x7684;.m&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x6269;&#x5C55;,&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x4FDD;&#x8BC1;&#x826F;&#x597D;&#x7684;&#x4EE3;&#x7801;&#x5C01;&#x88C5;&#x6027;&#xFF0C;&#x907F;&#x514D;&#x628A;&#x79C1;&#x6709;&#x63A5;&#x53E3;&#x66B4;&#x9732;&#x7ED9;&#x5916;&#x9762;&#x3002;<br>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x6269;&#x5C55;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;<br><figure class="highlight c++"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -231,7 +239,7 @@
 <span class="keyword">@end</span>
  
  
-<span class="class"><span class="keyword">@interface</span> <span class="title">MyClass</span> () {</span> <span class="comment">//注意此处：扩展</span>
+<span class="class"><span class="keyword">@interface</span> <span class="title">MyClass</span> () {</span> <span class="comment">//&#x6CE8;&#x610F;&#x6B64;&#x5904;&#xFF1A;&#x6269;&#x5C55;</span>
     <span class="keyword">float</span> value;
 }
 - (<span class="keyword">void</span>)setValue:(<span class="keyword">float</span>)newValue;
@@ -249,149 +257,144 @@
  
 <span class="keyword">@end</span>
 </pre></td></tr></table></figure>
-
-
       
     </div>
-    <footer>
+    <footer class="article-footer">
+      <a data-url="http://www.hongtaozhy.com/2014/01/09/category&&extension/" data-id="nuaes5fqr3k7lqq5" class="article-share-link">Share</a>
       
-        
-  
-  <div class="categories">
-    <a href="/categories/iOS/">iOS</a>
-  </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/iOS/">iOS</a>, <a href="/tags/category/">category</a>, <a href="/tags/extension/">extension</a>
-  </div>
-
-<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];</script>
-
       
-      <div class="clearfix"></div>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/category/">category</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/extension/">extension</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/01/24/string1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (转)字符串是否包含问题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/01/08/keychain/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">关于使用Keychain实现同一个发布证书下的数据共享</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
-<section id="comment">
+<section id="comments">
   <!-- Duoshuo Comment BEGIN -->
-  	<div class="ds-thread"></div>
+    <div class="ds-thread"></div>
   <script type="text/javascript">
   var duoshuoQuery = {short_name:"hongtaozhy"};
-  	(function() {
-  		var ds = document.createElement('script');
-  		ds.type = 'text/javascript';ds.async = true;
-  		ds.src = 'http://static.duoshuo.com/embed.js';
-  		ds.charset = 'UTF-8';
-  		(document.getElementsByTagName('head')[0] 
-  		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-  	})();
-  	</script>
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = 'http://static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
   <!-- Duoshuo Comment END -->
 </section>
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:www.hongtaozhy.com">
-  </form>
-</div>
-
-  
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/Tips/">Tips</a><small>10</small></li>
-  
-    <li><a href="/categories/iOS/">iOS</a><small>4</small></li>
-  
-    <li><a href="/categories/markdown/">markdown</a><small>1</small></li>
-  
-    <li><a href="/categories/人生/">人生</a><small>2</small></li>
-  
-    <li><a href="/categories/算法/">算法</a><small>1</small></li>
-  
-  </ul>
-</div>
-
-
-  <iframe width="100%" height="650" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=650&fansRow=3&ptype=1&speed=50&skin=4&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2033686914&verifier=e0a18d12&dpc=1"></iframe>
-
-  
-<div class="widget tag">
-  <h3 class="title">最新文章</h3>
-  <ul class="entry">
-    
-      <li>
-        <a href="/2014/05/27/oc/">objective-c代码行数统计</a>
-      </li>
-    
-      <li>
-        <a href="/2014/05/16/svnmerge-1/">SVN Merge分支代码提交</a>
-      </li>
-    
-      <li>
-        <a href="/2014/05/16/mnq/">iOS模拟器路径</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/04/svnmerge/">SVN回滚代码</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a>
-      </li>
-    
-  </ul>
-</div>
-
-
-  <div class="widget tag">
-<h3 class="title">友情链接</h3>
-<ul class="entry">
-<li><a href="http://www.cppblog.com/wicbnu" title="从零开始"></a>wicbnu</li>
-<li><a href="http://woyaowenzi.github.io/" title="WOYAOWENZI's blog">WOYAOWENZI's blog</a></li>
-<li><a href="http://huangliangjie.gitcafe.com/" title="Liangjie's hexo site">Liangjie's hexo site</a></li>
-<li><a href="http://waysnotes.com/" title="WaysNotes">WaysNotes</a></li>
-</ul>
-</div>
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2014 hongtaozhy
-  
-</div>
-<div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("pre").addClass("prettyprint");
-        $("code").addClass("prettyprint");
+</section>
         
-        prettyPrint();
-    });
-</script>  
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/人生/">人生</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04">April 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01">January 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12">December 2013</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/05/27/oc/">objective-c代码行数统计</a>
+          </li>
+        
+          <li>
+            <a href="/2014/05/16/svnmerge-1/">SVN Merge分支代码提交</a>
+          </li>
+        
+          <li>
+            <a href="/2014/05/16/mnq/">iOS模拟器路径</a>
+          </li>
+        
+          <li>
+            <a href="/2014/04/04/svnmerge/">SVN回滚代码</a>
+          </li>
+        
+          <li>
+            <a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    <iframe width="100%" height="650" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=650&fansRow=3&ptype=1&speed=50&skin=4&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2033686914&verifier=e0a18d12&dpc=1"></iframe>
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Hadn_t<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">存档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
 
+
+<script type="text/javascript" src="/js/script.js"></script>
+  </div>
 </body>
 </html>

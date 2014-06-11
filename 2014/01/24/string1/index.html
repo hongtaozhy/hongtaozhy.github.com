@@ -1,116 +1,134 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta property="wb:webmaster" content="54c1f241b580a6e1" />
   <meta charset="utf-8">
   
-  <title>(转)字符串是否包含问题 | Hadnot&#39;s blog</title>
-  <meta name="author" content="hongtaozhy">
-  
-  <meta name="description" content="blog,ios,cpp,程序员,工作,objective-c,oc">
-  
-  
+  <title>(转)字符串是否包含问题 | Hadn_t</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&#x672C;&#x6587;&#x5F15;&#x7528;&#x81EA;&#x6B64;
 
-  <meta property="og:title" content="(转)字符串是否包含问题"/>
-  <meta property="og:site_name" content="Hadnot&#39;s blog"/>
+&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x95EE;&#x9898;
+&#x9898;&#x76EE;&#x63CF;&#x8FF0;
+&#x5047;&#x8BBE;&#x8FD9;&#x6709;&#x4E24;&#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(转)字符串是否包含问题">
+<meta property="og:url" content="http://www.hongtaozhy.com//2014/01/24/string1/">
+<meta property="og:site_name" content="Hadn_t">
+<meta property="og:description" content="&#x672C;&#x6587;&#x5F15;&#x7528;&#x81EA;&#x6B64;
 
+&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x95EE;&#x9898;
+&#x9898;&#x76EE;&#x63CF;&#x8FF0;
+&#x5047;&#x8BBE;&#x8FD9;&#x6709;&#x4E24;&#x">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(转)字符串是否包含问题">
+<meta name="twitter:description" content="&#x672C;&#x6587;&#x5F15;&#x7528;&#x81EA;&#x6B64;
+
+&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x95EE;&#x9898;
+&#x9898;&#x76EE;&#x63CF;&#x8FF0;
+&#x5047;&#x8BBE;&#x8FD9;&#x6709;&#x4E24;&#x">
   
-    <meta property="og:image" content="undefined"/>
   
+    <link rel="icon" href="/favicon.ico">
   
-  <link href="/favicon.ico" rel="icon" type="image/x-ico">
-  <link rel="alternate" href="/atom.xml" title="Hadnot&#39;s blog" type="application/atom+xml">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <!--  -->
-  
-  <link rel="stylesheet" href="/css/prettify_raytaylorism.css" type="text/css">
-  <link rel="stylesheet" href="/css/style.css?ver=3" media="screen" type="text/css">
+  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/duoshuo_style.css?ver=5" media="screen" type="text/css">
-  
-  <script type="text/javascript" src="/js/prettify.js"></script>
-  <script type="text/javascript" src="/js/jquery-2.0.3.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 </head>
-
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Hadnot&#39;s blog</a></h1>
-  <h2><a href="/">www.hongtaozhy.com</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">首页</a></li>
-    
-      <li><a href="/archives">存档</a></li>
-    
-      <li><a href="/about">关于</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hadn_t</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">精通Symbian/Android/iOS等手机平台的最新贴膜技术</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">存档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://www.hongtaozhy.com/"></form>
+      </div>
+    </div>
   </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-string1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/01/24/string1/" class="article-date">
+  <time datetime="2014-01-24T02:15:18.000Z" itemprop="datePublished">Jan 24 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/算法/">算法</a>
   </div>
-</div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-01-24T02:15:18.000Z"><a href="/2014/01/24/string1/">1月 24 2014</a></time>
-      
-      
-  
-    <h1 class="title">(转)字符串是否包含问题</h1>
+    <h1 class="article-title" itemprop="name">
+      (转)字符串是否包含问题
+    </h1>
   
 
-    </header>
-    <div class="entry">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/edit/master/ebook/zh/02.0.md" target="_blank">本文引用自此</a></p>
+<p><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/edit/master/ebook/zh/02.0.md" target="_blank" rel="external">&#x672C;&#x6587;&#x5F15;&#x7528;&#x81EA;&#x6B64;</a></p>
 </blockquote>
-<h2 id="-">字符串是否包含问题</h2>
-<h3 id="-">题目描述</h3>
-<p>假设这有两个分别由字母组成的字符串A另外字符串B，字符串B的字母数较字符串A少一些。什么方法能最快地查出字符串B所有字母是不是都在字符串A里？也就是说判断字符串B是不是字符串A的真子集（为了简化，姑且认为两个集合都不是空集，即字符串都不为空。）。为了简单起见，我们规定输入的字符串只包含大写英文字母。</p>
-<p>实现函数bool compare(string &amp;A,string &amp;B)</p>
-<p>比如，如果是下面两个字符串：</p>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x95EE;&#x9898;">&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x95EE;&#x9898;</h2>
+<h3 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h3>
+<p>&#x5047;&#x8BBE;&#x8FD9;&#x6709;&#x4E24;&#x4E2A;&#x5206;&#x522B;&#x7531;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;A&#x53E6;&#x5916;&#x5B57;&#x7B26;&#x4E32;B&#xFF0C;&#x5B57;&#x7B26;&#x4E32;B&#x7684;&#x5B57;&#x6BCD;&#x6570;&#x8F83;&#x5B57;&#x7B26;&#x4E32;A&#x5C11;&#x4E00;&#x4E9B;&#x3002;&#x4EC0;&#x4E48;&#x65B9;&#x6CD5;&#x80FD;&#x6700;&#x5FEB;&#x5730;&#x67E5;&#x51FA;&#x5B57;&#x7B26;&#x4E32;B&#x6240;&#x6709;&#x5B57;&#x6BCD;&#x662F;&#x4E0D;&#x662F;&#x90FD;&#x5728;&#x5B57;&#x7B26;&#x4E32;A&#x91CC;&#xFF1F;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;B&#x662F;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#x4E32;A&#x7684;&#x771F;&#x5B50;&#x96C6;&#xFF08;&#x4E3A;&#x4E86;&#x7B80;&#x5316;&#xFF0C;&#x59D1;&#x4E14;&#x8BA4;&#x4E3A;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x90FD;&#x4E0D;&#x662F;&#x7A7A;&#x96C6;&#xFF0C;&#x5373;&#x5B57;&#x7B26;&#x4E32;&#x90FD;&#x4E0D;&#x4E3A;&#x7A7A;&#x3002;&#xFF09;&#x3002;&#x4E3A;&#x4E86;&#x7B80;&#x5355;&#x8D77;&#x89C1;&#xFF0C;&#x6211;&#x4EEC;&#x89C4;&#x5B9A;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x53EA;&#x5305;&#x542B;&#x5927;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x3002;</p>
+<p>&#x5B9E;&#x73B0;&#x51FD;&#x6570;bool compare(string &amp;A,string &amp;B)</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
 <p>String 1: ABCDEFGHLMNOPQRS</p>
 <p>String 2: DCGSRQPO</p>
-<p>答案是true，即String2里的字母在String1里也都有，或者说String2是String1的真子集。</p>
-<p>如果是下面两个字符串：</p>
+<p>&#x7B54;&#x6848;&#x662F;true&#xFF0C;&#x5373;String2&#x91CC;&#x7684;&#x5B57;&#x6BCD;&#x5728;String1&#x91CC;&#x4E5F;&#x90FD;&#x6709;&#xFF0C;&#x6216;&#x8005;&#x8BF4;String2&#x662F;String1&#x7684;&#x771F;&#x5B50;&#x96C6;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
 <p>String 1: ABCDEFGHLMNOPQRS</p>
 <p>String 2: DCGSRQPZ</p>
-<p>答案是false，因为字符串String2里的Z字母不在字符串String1里。</p>
-<p>点评：</p>
+<p>&#x7B54;&#x6848;&#x662F;false&#xFF0C;&#x56E0;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;String2&#x91CC;&#x7684;Z&#x5B57;&#x6BCD;&#x4E0D;&#x5728;&#x5B57;&#x7B26;&#x4E32;String1&#x91CC;&#x3002;</p>
+<p>&#x70B9;&#x8BC4;&#xFF1A;</p>
 <ol>
-<li><p>题目描述虽长，但题意很明了，就是给定一长一短的两个字符串A，B，假设A长B短，要求判断B是否包含在字符串A中，即B?(-A。</p>
+<li><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#x867D;&#x957F;&#xFF0C;&#x4F46;&#x9898;&#x610F;&#x5F88;&#x660E;&#x4E86;&#xFF0C;&#x5C31;&#x662F;&#x7ED9;&#x5B9A;&#x4E00;&#x957F;&#x4E00;&#x77ED;&#x7684;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;A&#xFF0C;B&#xFF0C;&#x5047;&#x8BBE;A&#x957F;B&#x77ED;&#xFF0C;&#x8981;&#x6C42;&#x5224;&#x65AD;B&#x662F;&#x5426;&#x5305;&#x542B;&#x5728;&#x5B57;&#x7B26;&#x4E32;A&#x4E2D;&#xFF0C;&#x5373;B?(-A&#x3002;</p>
 </li>
-<li><p>似乎简单，但实现起来并不轻松，且如果面试官步步紧逼，一个一个否决你能想到的方法，要你给出更好、最好的方案时，恐怕就要伤不少脑筋了。</p>
+<li><p>&#x4F3C;&#x4E4E;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x5B9E;&#x73B0;&#x8D77;&#x6765;&#x5E76;&#x4E0D;&#x8F7B;&#x677E;&#xFF0C;&#x4E14;&#x5982;&#x679C;&#x9762;&#x8BD5;&#x5B98;&#x6B65;&#x6B65;&#x7D27;&#x903C;&#xFF0C;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x5426;&#x51B3;&#x4F60;&#x80FD;&#x60F3;&#x5230;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8981;&#x4F60;&#x7ED9;&#x51FA;&#x66F4;&#x597D;&#x3001;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6848;&#x65F6;&#xFF0C;&#x6050;&#x6015;&#x5C31;&#x8981;&#x4F24;&#x4E0D;&#x5C11;&#x8111;&#x7B4B;&#x4E86;&#x3002;</p>
 </li>
 </ol>
-<p>在揭晓答案之前，读者最好先想一想，看看自己能想到的最好方案是什么，是否与本文作者所见略同。</p>
-<h3 id="-">解法一、暴力轮询</h3>
-<p><a id="more"></a>
-判断string2中的字符是否在string1中?：</p>
+<p>&#x5728;&#x63ED;&#x6653;&#x7B54;&#x6848;&#x4E4B;&#x524D;&#xFF0C;&#x8BFB;&#x8005;&#x6700;&#x597D;&#x5148;&#x60F3;&#x4E00;&#x60F3;&#xFF0C;&#x770B;&#x770B;&#x81EA;&#x5DF1;&#x80FD;&#x60F3;&#x5230;&#x7684;&#x6700;&#x597D;&#x65B9;&#x6848;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x662F;&#x5426;&#x4E0E;&#x672C;&#x6587;&#x4F5C;&#x8005;&#x6240;&#x89C1;&#x7565;&#x540C;&#x3002;</p>
+<h3 id="&#x89E3;&#x6CD5;&#x4E00;&#x3001;&#x66B4;&#x529B;&#x8F6E;&#x8BE2;">&#x89E3;&#x6CD5;&#x4E00;&#x3001;&#x66B4;&#x529B;&#x8F6E;&#x8BE2;</h3>
+<p><a id="more"></a><br>&#x5224;&#x65AD;string2&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x662F;&#x5426;&#x5728;string1&#x4E2D;?&#xFF1A;</p>
 <p>String 1: ABCDEFGHLMNOPQRS</p>
 <p>String 2: DCGSRQPO</p>
-<p>最直观也是最简单的思路是，针对string2中每一个字符，一一与string1中每个字符依次轮询比较，看它是否在String1中。</p>
-<p>代码可如下编写：</p>
+<p>&#x6700;&#x76F4;&#x89C2;&#x4E5F;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x601D;&#x8DEF;&#x662F;&#xFF0C;&#x9488;&#x5BF9;string2&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x4E00;&#x4E00;&#x4E0E;string1&#x4E2D;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x4F9D;&#x6B21;&#x8F6E;&#x8BE2;&#x6BD4;&#x8F83;&#xFF0C;&#x770B;&#x5B83;&#x662F;&#x5426;&#x5728;String1&#x4E2D;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x53EF;&#x5982;&#x4E0B;&#x7F16;&#x5199;&#xFF1A;</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -126,11 +144,11 @@
 13
 14
 </pre></td><td class="code"><pre><span class="comment">//copyright@caopengcs 2013-01-14</span>
-<span class="keyword">bool</span> compare(<span class="built_in">string</span> &a,<span class="built_in">string</span> &b)
+<span class="keyword">bool</span> compare(<span class="built_in">string</span> &amp;a,<span class="built_in">string</span> &amp;b)
 {
     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length(); ++i) {
         <span class="keyword">int</span> j;
-        <span class="keyword">for</span> (j = <span class="number">0</span>; (j &lt; a.length()) && (a[j] != b[i]); ++j)
+        <span class="keyword">for</span> (j = <span class="number">0</span>; (j &lt; a.length()) &amp;&amp; (a[j] != b[i]); ++j)
             ;
         <span class="keyword">if</span> (j &gt;= a.length())
         {
@@ -141,11 +159,11 @@
 }
 </pre></td></tr></table></figure>
 
-<p>假设n是字符串String1的长度，m是字符串String2的长度，那么此算法，需要O（n<em>m）次操作，以上面的例子来说，将会有16</em>8 = 128次操作。显然，时间开销太大，应该找到一种更好的办法。</p>
-<h3 id="-">解法二、普通排序</h3>
-<p>一个稍微好一点的方案是先对这两个字符串的字母进行排序，然后同时对两个字串依次轮询。两个字串的排序需要(常规情况)O(m log m) + O(n log n)次操作，之后的线性扫描需要O(m+n)次操作。</p>
-<p>同样拿上面的字串做例子，将会需要16<em>4 + 8</em>3 = 88，再加上对两个字串线性扫描的16 + 8 = 24的操作。(随着字串长度的增长，你会发现这个算法的效果会越来越好)</p>
-<p>关于排序方法，可采用最常用的快速排序，C有库函数qsort,C++有库函数sort，排序不是重点，因此使用库函数好一些。</p>
+<p>&#x5047;&#x8BBE;n&#x662F;&#x5B57;&#x7B26;&#x4E32;String1&#x7684;&#x957F;&#x5EA6;&#xFF0C;m&#x662F;&#x5B57;&#x7B26;&#x4E32;String2&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x7B97;&#x6CD5;&#xFF0C;&#x9700;&#x8981;O&#xFF08;n<em>m&#xFF09;&#x6B21;&#x64CD;&#x4F5C;&#xFF0C;&#x4EE5;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x8BF4;&#xFF0C;&#x5C06;&#x4F1A;&#x6709;16</em>8 = 128&#x6B21;&#x64CD;&#x4F5C;&#x3002;&#x663E;&#x7136;&#xFF0C;&#x65F6;&#x95F4;&#x5F00;&#x9500;&#x592A;&#x5927;&#xFF0C;&#x5E94;&#x8BE5;&#x627E;&#x5230;&#x4E00;&#x79CD;&#x66F4;&#x597D;&#x7684;&#x529E;&#x6CD5;&#x3002;</p>
+<h3 id="&#x89E3;&#x6CD5;&#x4E8C;&#x3001;&#x666E;&#x901A;&#x6392;&#x5E8F;">&#x89E3;&#x6CD5;&#x4E8C;&#x3001;&#x666E;&#x901A;&#x6392;&#x5E8F;</h3>
+<p>&#x4E00;&#x4E2A;&#x7A0D;&#x5FAE;&#x597D;&#x4E00;&#x70B9;&#x7684;&#x65B9;&#x6848;&#x662F;&#x5148;&#x5BF9;&#x8FD9;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x6BCD;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x540C;&#x65F6;&#x5BF9;&#x4E24;&#x4E2A;&#x5B57;&#x4E32;&#x4F9D;&#x6B21;&#x8F6E;&#x8BE2;&#x3002;&#x4E24;&#x4E2A;&#x5B57;&#x4E32;&#x7684;&#x6392;&#x5E8F;&#x9700;&#x8981;(&#x5E38;&#x89C4;&#x60C5;&#x51B5;)O(m log m) + O(n log n)&#x6B21;&#x64CD;&#x4F5C;&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x7EBF;&#x6027;&#x626B;&#x63CF;&#x9700;&#x8981;O(m+n)&#x6B21;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x540C;&#x6837;&#x62FF;&#x4E0A;&#x9762;&#x7684;&#x5B57;&#x4E32;&#x505A;&#x4F8B;&#x5B50;&#xFF0C;&#x5C06;&#x4F1A;&#x9700;&#x8981;16<em>4 + 8</em>3 = 88&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x5BF9;&#x4E24;&#x4E2A;&#x5B57;&#x4E32;&#x7EBF;&#x6027;&#x626B;&#x63CF;&#x7684;16 + 8 = 24&#x7684;&#x64CD;&#x4F5C;&#x3002;(&#x968F;&#x7740;&#x5B57;&#x4E32;&#x957F;&#x5EA6;&#x7684;&#x589E;&#x957F;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x7684;&#x6548;&#x679C;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x597D;)</p>
+<p>&#x5173;&#x4E8E;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x91C7;&#x7528;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#xFF0C;C&#x6709;&#x5E93;&#x51FD;&#x6570;qsort,C++&#x6709;&#x5E93;&#x51FD;&#x6570;sort&#xFF0C;&#x6392;&#x5E8F;&#x4E0D;&#x662F;&#x91CD;&#x70B9;&#xFF0C;&#x56E0;&#x6B64;&#x4F7F;&#x7528;&#x5E93;&#x51FD;&#x6570;&#x597D;&#x4E00;&#x4E9B;&#x3002;</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -168,14 +186,14 @@
 20
 21
 </pre></td><td class="code"><pre><span class="comment">//copyright@caopengcs 2014-01-14 </span>
-<span class="comment">//注意A B中可能包含重复字符，所以注意A下标不要轻易移动。这种方法改变了字符串。如不想改变请自己复制</span>
-<span class="keyword">bool</span> compare(<span class="built_in">string</span> &a,<span class="built_in">string</span> &b)
+<span class="comment">//&#x6CE8;&#x610F;A B&#x4E2D;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x91CD;&#x590D;&#x5B57;&#x7B26;&#xFF0C;&#x6240;&#x4EE5;&#x6CE8;&#x610F;A&#x4E0B;&#x6807;&#x4E0D;&#x8981;&#x8F7B;&#x6613;&#x79FB;&#x52A8;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x6539;&#x53D8;&#x4E86;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5982;&#x4E0D;&#x60F3;&#x6539;&#x53D8;&#x8BF7;&#x81EA;&#x5DF1;&#x590D;&#x5236;</span>
+<span class="keyword">bool</span> compare(<span class="built_in">string</span> &amp;a,<span class="built_in">string</span> &amp;b)
 {
     sort(a.begin(),a.end());
     sort(b.begin(),b.end());
     <span class="keyword">for</span> (<span class="keyword">int</span> pa = <span class="number">0</span>, pb = <span class="number">0</span>; pb &lt; b.length();)
     {
-        <span class="keyword">while</span> ((pa &lt; a.length()) && (a[pa] &lt; b[pb]))
+        <span class="keyword">while</span> ((pa &lt; a.length()) &amp;&amp; (a[pa] &lt; b[pb]))
         {
             ++pa;
         }
@@ -190,9 +208,11 @@
 }
 </pre></td></tr></table></figure>
 
-<h3 id="-">解法三、计数比较</h3>
-<p>此方案与上述相比，区别在于不用排序。采用线性时间的计数方法，假设需要比较字符串A（n）中是否包含字符串B（m），统计A中出现的字符O(n)，比较B中是否有出现的字符O(m)，总计时间复杂度为：O(n+m)。</p>
-<p>代码如下：</p>
+
+
+<h3 id="&#x89E3;&#x6CD5;&#x4E09;&#x3001;&#x8BA1;&#x6570;&#x6BD4;&#x8F83;">&#x89E3;&#x6CD5;&#x4E09;&#x3001;&#x8BA1;&#x6570;&#x6BD4;&#x8F83;</h3>
+<p>&#x6B64;&#x65B9;&#x6848;&#x4E0E;&#x4E0A;&#x8FF0;&#x76F8;&#x6BD4;&#xFF0C;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x4E0D;&#x7528;&#x6392;&#x5E8F;&#x3002;&#x91C7;&#x7528;&#x7EBF;&#x6027;&#x65F6;&#x95F4;&#x7684;&#x8BA1;&#x6570;&#x65B9;&#x6CD5;&#xFF0C;&#x5047;&#x8BBE;&#x9700;&#x8981;&#x6BD4;&#x8F83;&#x5B57;&#x7B26;&#x4E32;A&#xFF08;n&#xFF09;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B;&#x5B57;&#x7B26;&#x4E32;B&#xFF08;m&#xFF09;&#xFF0C;&#x7EDF;&#x8BA1;A&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x7B26;O(n)&#xFF0C;&#x6BD4;&#x8F83;B&#x4E2D;&#x662F;&#x5426;&#x6709;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x7B26;O(m)&#xFF0C;&#x603B;&#x8BA1;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;&#xFF1A;O(n+m)&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -221,27 +241,27 @@
 26
 27
 </pre></td><td class="code"><pre><span class="comment">// copyright@caopengcs 2014-01-14</span>
-<span class="comment">// modified by @古道西风 2014-01-14</span>
-<span class="keyword">bool</span> compare(<span class="built_in">string</span> &a,<span class="built_in">string</span> &b)
+<span class="comment">// modified by @&#x53E4;&#x9053;&#x897F;&#x98CE; 2014-01-14</span>
+<span class="keyword">bool</span> compare(<span class="built_in">string</span> &amp;a,<span class="built_in">string</span> &amp;b)
 {
     <span class="stl_container"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;</span> have;
     have.resize(<span class="number">26</span>,<span class="number">0</span>);
     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length(); ++i)
     {
-        ++have[a[i] - <span class="string">'A'</span>];
+        ++have[a[i] - <span class="string">&apos;A&apos;</span>];
     }
     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length(); ++i)
     {
-        <span class="comment">//若A中只需要包含同一个相同的字符即可代表B中重复出现的字符</span>
-        <span class="comment">//即A：CDEFAB	B：AABBCC 合法</span>
-        <span class="keyword">if</span> (have[b[i] - <span class="string">'A'</span>] == <span class="number">0</span>)
+        <span class="comment">//&#x82E5;A&#x4E2D;&#x53EA;&#x9700;&#x8981;&#x5305;&#x542B;&#x540C;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x7B26;&#x5373;&#x53EF;&#x4EE3;&#x8868;B&#x4E2D;&#x91CD;&#x590D;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x7B26;</span>
+        <span class="comment">//&#x5373;A&#xFF1A;CDEFAB	B&#xFF1A;AABBCC &#x5408;&#x6CD5;</span>
+        <span class="keyword">if</span> (have[b[i] - <span class="string">&apos;A&apos;</span>] == <span class="number">0</span>)
         {
             <span class="keyword">return</span> <span class="keyword">false</span>;
         }
-        <span class="comment">//若A中需要包含B中所有重复出现字符</span>
-        <span class="comment">//即A：AAACCDBBCCE	B：AABBCC 合法</span>
-        <span class="comment">//即A：BCDEFA	B：AABBCC 非法</span>
-        <span class="comment">//if (have[b[i] - 'A']-- == 0) {</span>
+        <span class="comment">//&#x82E5;A&#x4E2D;&#x9700;&#x8981;&#x5305;&#x542B;B&#x4E2D;&#x6240;&#x6709;&#x91CD;&#x590D;&#x51FA;&#x73B0;&#x5B57;&#x7B26;</span>
+        <span class="comment">//&#x5373;A&#xFF1A;AAACCDBBCCE	B&#xFF1A;AABBCC &#x5408;&#x6CD5;</span>
+        <span class="comment">//&#x5373;A&#xFF1A;BCDEFA	B&#xFF1A;AABBCC &#x975E;&#x6CD5;</span>
+        <span class="comment">//if (have[b[i] - &apos;A&apos;]-- == 0) {</span>
         <span class="comment">//	return false;</span>
         <span class="comment">//}</span>
     }
@@ -249,19 +269,19 @@
 }
 </pre></td></tr></table></figure>
 
-<h3 id="-hashtable">解法四、巧用hashtable</h3>
-<p>上述方案中，较好的方法是先对字符串进行排序，然后再线性扫描，总的时间已经优化到了：O(m+n)，貌似到了极限，还有没有更好的办法?</p>
-<p>可以对短字符串进行轮询（此思路的叙述可能与网上的一些叙述有出入。最好是把短的先存储，那样，会降低时间复杂度），把其中的每个字母都放入一个Hashtable里（始终设m为短字符串的长度，那么此项操作成本是O(m)或8次操作）。然后轮询长字符串，在Hashtable里查询短字符串的每个字符，看能否找到。如果找不到，说明没有匹配成功，轮询长字符串将消耗掉16次操作，这样两项操作加起来一共只有8+16=24次。</p>
-<p>当然，理想情况是如果长字串的前缀就为短字串，只需消耗8次操作，这样总共只需8+8=16次。</p>
-<p>或如梦想天窗所说： 我之前用散列表做过一次，算法如下：</p>
+<h3 id="&#x89E3;&#x6CD5;&#x56DB;&#x3001;&#x5DE7;&#x7528;hashtable">&#x89E3;&#x6CD5;&#x56DB;&#x3001;&#x5DE7;&#x7528;hashtable</h3>
+<p>&#x4E0A;&#x8FF0;&#x65B9;&#x6848;&#x4E2D;&#xFF0C;&#x8F83;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5148;&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x7EBF;&#x6027;&#x626B;&#x63CF;&#xFF0C;&#x603B;&#x7684;&#x65F6;&#x95F4;&#x5DF2;&#x7ECF;&#x4F18;&#x5316;&#x5230;&#x4E86;&#xFF1A;O(m+n)&#xFF0C;&#x8C8C;&#x4F3C;&#x5230;&#x4E86;&#x6781;&#x9650;&#xFF0C;&#x8FD8;&#x6709;&#x6CA1;&#x6709;&#x66F4;&#x597D;&#x7684;&#x529E;&#x6CD5;?</p>
+<p>&#x53EF;&#x4EE5;&#x5BF9;&#x77ED;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x8F6E;&#x8BE2;&#xFF08;&#x6B64;&#x601D;&#x8DEF;&#x7684;&#x53D9;&#x8FF0;&#x53EF;&#x80FD;&#x4E0E;&#x7F51;&#x4E0A;&#x7684;&#x4E00;&#x4E9B;&#x53D9;&#x8FF0;&#x6709;&#x51FA;&#x5165;&#x3002;&#x6700;&#x597D;&#x662F;&#x628A;&#x77ED;&#x7684;&#x5148;&#x5B58;&#x50A8;&#xFF0C;&#x90A3;&#x6837;&#xFF0C;&#x4F1A;&#x964D;&#x4F4E;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF09;&#xFF0C;&#x628A;&#x5176;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x6BCD;&#x90FD;&#x653E;&#x5165;&#x4E00;&#x4E2A;Hashtable&#x91CC;&#xFF08;&#x59CB;&#x7EC8;&#x8BBE;m&#x4E3A;&#x77ED;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x9879;&#x64CD;&#x4F5C;&#x6210;&#x672C;&#x662F;O(m)&#x6216;8&#x6B21;&#x64CD;&#x4F5C;&#xFF09;&#x3002;&#x7136;&#x540E;&#x8F6E;&#x8BE2;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5728;Hashtable&#x91CC;&#x67E5;&#x8BE2;&#x77ED;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x770B;&#x80FD;&#x5426;&#x627E;&#x5230;&#x3002;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x8BF4;&#x660E;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x8F6E;&#x8BE2;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x5C06;&#x6D88;&#x8017;&#x6389;16&#x6B21;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x6837;&#x4E24;&#x9879;&#x64CD;&#x4F5C;&#x52A0;&#x8D77;&#x6765;&#x4E00;&#x5171;&#x53EA;&#x6709;8+16=24&#x6B21;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x7406;&#x60F3;&#x60C5;&#x51B5;&#x662F;&#x5982;&#x679C;&#x957F;&#x5B57;&#x4E32;&#x7684;&#x524D;&#x7F00;&#x5C31;&#x4E3A;&#x77ED;&#x5B57;&#x4E32;&#xFF0C;&#x53EA;&#x9700;&#x6D88;&#x8017;8&#x6B21;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x6837;&#x603B;&#x5171;&#x53EA;&#x9700;8+8=16&#x6B21;&#x3002;</p>
+<p>&#x6216;&#x5982;&#x68A6;&#x60F3;&#x5929;&#x7A97;&#x6240;&#x8BF4;&#xFF1A; &#x6211;&#x4E4B;&#x524D;&#x7528;&#x6563;&#x5217;&#x8868;&#x505A;&#x8FC7;&#x4E00;&#x6B21;&#xFF0C;&#x7B97;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ol>
-<li>hash[26]，先全部清零，然后扫描短的字符串，若有相应的置1，</li>
-<li>计算hash[26]中1的个数，记为m</li>
-<li>扫描长字符串的每个字符a；若原来hash[a] == 1 ，则修改hash[a] = 0，并将m减1；若hash[a] == 0，则不做处理</li>
-<li>若m == 0 or 扫描结束，退出循环。</li>
+<li>hash[26]&#xFF0C;&#x5148;&#x5168;&#x90E8;&#x6E05;&#x96F6;&#xFF0C;&#x7136;&#x540E;&#x626B;&#x63CF;&#x77ED;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x82E5;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x7F6E;1&#xFF0C;</li>
+<li>&#x8BA1;&#x7B97;hash[26]&#x4E2D;1&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x8BB0;&#x4E3A;m</li>
+<li>&#x626B;&#x63CF;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;a&#xFF1B;&#x82E5;&#x539F;&#x6765;hash[a] == 1 &#xFF0C;&#x5219;&#x4FEE;&#x6539;hash[a] = 0&#xFF0C;&#x5E76;&#x5C06;m&#x51CF;1&#xFF1B;&#x82E5;hash[a] == 0&#xFF0C;&#x5219;&#x4E0D;&#x505A;&#x5904;&#x7406;</li>
+<li>&#x82E5;m == 0 or &#x626B;&#x63CF;&#x7ED3;&#x675F;&#xFF0C;&#x9000;&#x51FA;&#x5FAA;&#x73AF;&#x3002;</li>
 </ol>
-<p>这种方法其实和1.3节方法类似。</p>
-<p>代码实现，也不难，如下：</p>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5176;&#x5B9E;&#x548C;1.3&#x8282;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF0C;&#x4E5F;&#x4E0D;&#x96BE;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -289,14 +309,14 @@
 25
 26
 </pre></td><td class="code"><pre><span class="comment">// copyright@caopengcs 2014-01-14</span>
-<span class="keyword">bool</span> compare(<span class="built_in">string</span> &a,<span class="built_in">string</span> &b)
+<span class="keyword">bool</span> compare(<span class="built_in">string</span> &amp;a,<span class="built_in">string</span> &amp;b)
 {
     <span class="stl_container"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;</span> hash;
     hash.resize(<span class="number">26</span>,<span class="number">0</span>);
     <span class="keyword">int</span> m = <span class="number">0</span>;
     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length(); ++i)
     {
-        <span class="keyword">int</span> x = b[i] - <span class="string">'A'</span>;
+        <span class="keyword">int</span> x = b[i] - <span class="string">&apos;A&apos;</span>;
         <span class="keyword">if</span> (hash[x] == <span class="number">0</span>)
         {
             hash[x] = <span class="number">1</span>;
@@ -305,7 +325,7 @@
     }
     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length(); ++i)
     {
-        <span class="keyword">int</span> x = a[i] - <span class="string">'A'</span>;
+        <span class="keyword">int</span> x = a[i] - <span class="string">&apos;A&apos;</span>;
         <span class="keyword">if</span> (hash[x] == <span class="number">1</span>)
         {
             --m;
@@ -316,23 +336,24 @@
 }
 </pre></td></tr></table></figure>
 
-<h3 id="-">解法五、素数相乘</h3>
-<p>继续追问，还有更好的方案么?</p>
-<p>或许想到：O(n+m)已经是能得到的最好结果了，对每个字母至少访问一次才能完成这项操作，而前述的后两个方案是刚好是对每个字母只访问一次。</p>
-<p>ok，下面给出的方案更让人思路大开：</p>
-<p>假设有一个仅由字母组成字串，让每个每个字母与一个素数对应，从2开始，往后类推，A对应2，B对应3，C对应5，......。遍历第一个字串，把每个字母对应素数相乘。最终会得到一个整数。</p>
-<p>利用上面字母和素数的对应关系，对应第二个字符串中的字母，然后轮询，用每个字母对应的素数除前面得到的整数。如果结果有余数，说明结果为false。如果整个过程中没有余数，则说明第二个字符串是第一个的子集了（判断是不是真子集，可以比较两个字符串对应的素数乘积，若相等则不是真子集）。</p>
-<p>思路总结如下：</p>
+
+<h3 id="&#x89E3;&#x6CD5;&#x4E94;&#x3001;&#x7D20;&#x6570;&#x76F8;&#x4E58;">&#x89E3;&#x6CD5;&#x4E94;&#x3001;&#x7D20;&#x6570;&#x76F8;&#x4E58;</h3>
+<p>&#x7EE7;&#x7EED;&#x8FFD;&#x95EE;&#xFF0C;&#x8FD8;&#x6709;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x6848;&#x4E48;?</p>
+<p>&#x6216;&#x8BB8;&#x60F3;&#x5230;&#xFF1A;O(n+m)&#x5DF2;&#x7ECF;&#x662F;&#x80FD;&#x5F97;&#x5230;&#x7684;&#x6700;&#x597D;&#x7ED3;&#x679C;&#x4E86;&#xFF0C;&#x5BF9;&#x6BCF;&#x4E2A;&#x5B57;&#x6BCD;&#x81F3;&#x5C11;&#x8BBF;&#x95EE;&#x4E00;&#x6B21;&#x624D;&#x80FD;&#x5B8C;&#x6210;&#x8FD9;&#x9879;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x524D;&#x8FF0;&#x7684;&#x540E;&#x4E24;&#x4E2A;&#x65B9;&#x6848;&#x662F;&#x521A;&#x597D;&#x662F;&#x5BF9;&#x6BCF;&#x4E2A;&#x5B57;&#x6BCD;&#x53EA;&#x8BBF;&#x95EE;&#x4E00;&#x6B21;&#x3002;</p>
+<p>ok&#xFF0C;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x7684;&#x65B9;&#x6848;&#x66F4;&#x8BA9;&#x4EBA;&#x601D;&#x8DEF;&#x5927;&#x5F00;&#xFF1A;</p>
+<p>&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x4EC5;&#x7531;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x5B57;&#x4E32;&#xFF0C;&#x8BA9;&#x6BCF;&#x4E2A;&#x6BCF;&#x4E2A;&#x5B57;&#x6BCD;&#x4E0E;&#x4E00;&#x4E2A;&#x7D20;&#x6570;&#x5BF9;&#x5E94;&#xFF0C;&#x4ECE;2&#x5F00;&#x59CB;&#xFF0C;&#x5F80;&#x540E;&#x7C7B;&#x63A8;&#xFF0C;A&#x5BF9;&#x5E94;2&#xFF0C;B&#x5BF9;&#x5E94;3&#xFF0C;C&#x5BF9;&#x5E94;5&#xFF0C;&#x2026;&#x2026;&#x3002;&#x904D;&#x5386;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x4E32;&#xFF0C;&#x628A;&#x6BCF;&#x4E2A;&#x5B57;&#x6BCD;&#x5BF9;&#x5E94;&#x7D20;&#x6570;&#x76F8;&#x4E58;&#x3002;&#x6700;&#x7EC8;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x3002;</p>
+<p>&#x5229;&#x7528;&#x4E0A;&#x9762;&#x5B57;&#x6BCD;&#x548C;&#x7D20;&#x6570;&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#xFF0C;&#x5BF9;&#x5E94;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x7136;&#x540E;&#x8F6E;&#x8BE2;&#xFF0C;&#x7528;&#x6BCF;&#x4E2A;&#x5B57;&#x6BCD;&#x5BF9;&#x5E94;&#x7684;&#x7D20;&#x6570;&#x9664;&#x524D;&#x9762;&#x5F97;&#x5230;&#x7684;&#x6574;&#x6570;&#x3002;&#x5982;&#x679C;&#x7ED3;&#x679C;&#x6709;&#x4F59;&#x6570;&#xFF0C;&#x8BF4;&#x660E;&#x7ED3;&#x679C;&#x4E3A;false&#x3002;&#x5982;&#x679C;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#x6CA1;&#x6709;&#x4F59;&#x6570;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x7684;&#x5B50;&#x96C6;&#x4E86;&#xFF08;&#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x771F;&#x5B50;&#x96C6;&#xFF0C;&#x53EF;&#x4EE5;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x5E94;&#x7684;&#x7D20;&#x6570;&#x4E58;&#x79EF;&#xFF0C;&#x82E5;&#x76F8;&#x7B49;&#x5219;&#x4E0D;&#x662F;&#x771F;&#x5B50;&#x96C6;&#xFF09;&#x3002;</p>
+<p>&#x601D;&#x8DEF;&#x603B;&#x7ED3;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ol>
-<li>按照从小到大的顺序，用26个素数分别与字符&#39;A&#39;到&#39;Z&#39;一一对应。</li>
-<li>遍历长字符串，求得每个字符对应素数的乘积。</li>
-<li>遍历短字符串，判断乘积能否被短字符串中的字符对应的素数整除。</li>
-<li>输出结果。</li>
+<li>&#x6309;&#x7167;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x7528;26&#x4E2A;&#x7D20;&#x6570;&#x5206;&#x522B;&#x4E0E;&#x5B57;&#x7B26;&#x2019;A&#x2019;&#x5230;&#x2019;Z&#x2019;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002;</li>
+<li>&#x904D;&#x5386;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6C42;&#x5F97;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x5BF9;&#x5E94;&#x7D20;&#x6570;&#x7684;&#x4E58;&#x79EF;&#x3002;</li>
+<li>&#x904D;&#x5386;&#x77ED;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5224;&#x65AD;&#x4E58;&#x79EF;&#x80FD;&#x5426;&#x88AB;&#x77ED;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x5BF9;&#x5E94;&#x7684;&#x7D20;&#x6570;&#x6574;&#x9664;&#x3002;</li>
+<li>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x3002;</li>
 </ol>
-<p>如前所述，算法的时间复杂度为O(m+n)的最好的情况为O(n)（遍历短的字符串的第一个数，与长字符串素数的乘积相除，即出现余数，便可退出程序，返回false），n为长字串的长度，空间复杂度为O(1)。</p>
-<p>不过，正如原文中所述：“现在我想告诉你 —— Guy的方案在算法上并不能说就比我的好。而且在实际操作中，你很可能仍会使用我的方案，因为它更通用，无需跟麻烦的大型数字打交道。但从”巧妙水平“上讲，Guy提供的是一种更、更、更有趣的方案。”</p>
-<p>ok，如果你有更好的思路，欢迎在本文的评论中给出，非常感谢。</p>
-<p>这种方法的缺点是可能整数溢出……</p>
+<p>&#x5982;&#x524D;&#x6240;&#x8FF0;&#xFF0C;&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(m+n)&#x7684;&#x6700;&#x597D;&#x7684;&#x60C5;&#x51B5;&#x4E3A;O(n)&#xFF08;&#x904D;&#x5386;&#x77ED;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#xFF0C;&#x4E0E;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7D20;&#x6570;&#x7684;&#x4E58;&#x79EF;&#x76F8;&#x9664;&#xFF0C;&#x5373;&#x51FA;&#x73B0;&#x4F59;&#x6570;&#xFF0C;&#x4FBF;&#x53EF;&#x9000;&#x51FA;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD4;&#x56DE;false&#xFF09;&#xFF0C;n&#x4E3A;&#x957F;&#x5B57;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(1)&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x6B63;&#x5982;&#x539F;&#x6587;&#x4E2D;&#x6240;&#x8FF0;&#xFF1A;&#x201C;&#x73B0;&#x5728;&#x6211;&#x60F3;&#x544A;&#x8BC9;&#x4F60; &#x2014;&#x2014; Guy&#x7684;&#x65B9;&#x6848;&#x5728;&#x7B97;&#x6CD5;&#x4E0A;&#x5E76;&#x4E0D;&#x80FD;&#x8BF4;&#x5C31;&#x6BD4;&#x6211;&#x7684;&#x597D;&#x3002;&#x800C;&#x4E14;&#x5728;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x4E2D;&#xFF0C;&#x4F60;&#x5F88;&#x53EF;&#x80FD;&#x4ECD;&#x4F1A;&#x4F7F;&#x7528;&#x6211;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x66F4;&#x901A;&#x7528;&#xFF0C;&#x65E0;&#x9700;&#x8DDF;&#x9EBB;&#x70E6;&#x7684;&#x5927;&#x578B;&#x6570;&#x5B57;&#x6253;&#x4EA4;&#x9053;&#x3002;&#x4F46;&#x4ECE;&#x201D;&#x5DE7;&#x5999;&#x6C34;&#x5E73;&#x201C;&#x4E0A;&#x8BB2;&#xFF0C;Guy&#x63D0;&#x4F9B;&#x7684;&#x662F;&#x4E00;&#x79CD;&#x66F4;&#x3001;&#x66F4;&#x3001;&#x66F4;&#x6709;&#x8DA3;&#x7684;&#x65B9;&#x6848;&#x3002;&#x201D;</p>
+<p>ok&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6709;&#x66F4;&#x597D;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x6B22;&#x8FCE;&#x5728;&#x672C;&#x6587;&#x7684;&#x8BC4;&#x8BBA;&#x4E2D;&#x7ED9;&#x51FA;&#xFF0C;&#x975E;&#x5E38;&#x611F;&#x8C22;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x7F3A;&#x70B9;&#x662F;&#x53EF;&#x80FD;&#x6574;&#x6570;&#x6EA2;&#x51FA;&#x2026;&#x2026;</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -358,14 +379,14 @@
 23
 24
 </pre></td><td class="code"><pre><span class="comment">// copyright@caopengcs </span>
-<span class="comment">//此方法只有理论意义，因为整数乘积很大，有溢出风险</span>
-<span class="keyword">bool</span> compare(<span class="built_in">string</span> &a,<span class="built_in">string</span> &b)
+<span class="comment">//&#x6B64;&#x65B9;&#x6CD5;&#x53EA;&#x6709;&#x7406;&#x8BBA;&#x610F;&#x4E49;&#xFF0C;&#x56E0;&#x4E3A;&#x6574;&#x6570;&#x4E58;&#x79EF;&#x5F88;&#x5927;&#xFF0C;&#x6709;&#x6EA2;&#x51FA;&#x98CE;&#x9669;</span>
+<span class="keyword">bool</span> compare(<span class="built_in">string</span> &amp;a,<span class="built_in">string</span> &amp;b)
 {
     <span class="keyword">const</span> <span class="keyword">int</span> p[<span class="number">26</span>] = {<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>, <span class="number">41</span>, <span class="number">43</span>, <span class="number">47</span>, <span class="number">53</span>, <span class="number">59</span>,<span class="number">61</span>, <span class="number">67</span>, <span class="number">71</span>, <span class="number">73</span>, <span class="number">79</span>, <span class="number">83</span>, <span class="number">89</span>, <span class="number">97</span>, <span class="number">101</span>};
     <span class="keyword">int</span> f = <span class="number">1</span>;
     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length(); ++i)
     {
-        <span class="keyword">int</span> x = p[a[i] - <span class="string">'A'</span>];
+        <span class="keyword">int</span> x = p[a[i] - <span class="string">&apos;A&apos;</span>];
         <span class="keyword">if</span> (f % x)
         {
             f *= x;
@@ -373,7 +394,7 @@
     }
     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length(); ++i)
     {
-        <span class="keyword">int</span> x = p[b[i] - <span class="string">'A'</span>];
+        <span class="keyword">int</span> x = p[b[i] - <span class="string">&apos;A&apos;</span>];
         <span class="keyword">if</span> (f % x)
         {
             <span class="keyword">return</span> <span class="keyword">false</span>;
@@ -383,8 +404,8 @@
 }
 </pre></td></tr></table></figure>
 
-<h3 id="-">解法六、位运算</h3>
-<p>最好的思路是对字符串A,用位运算（26bit整数表示)计算出一个“签名”，再用B中的字符到A里面进行查找。这个方法的实质是用一个整数代替了hashtable，空间复杂度可以降低为O(1)。时间复杂度还是O(n + m)。</p>
+<h3 id="&#x89E3;&#x6CD5;&#x516D;&#x3001;&#x4F4D;&#x8FD0;&#x7B97;">&#x89E3;&#x6CD5;&#x516D;&#x3001;&#x4F4D;&#x8FD0;&#x7B97;</h3>
+<p>&#x6700;&#x597D;&#x7684;&#x601D;&#x8DEF;&#x662F;&#x5BF9;&#x5B57;&#x7B26;&#x4E32;A,&#x7528;&#x4F4D;&#x8FD0;&#x7B97;&#xFF08;26bit&#x6574;&#x6570;&#x8868;&#x793A;)&#x8BA1;&#x7B97;&#x51FA;&#x4E00;&#x4E2A;&#x201C;&#x7B7E;&#x540D;&#x201D;&#xFF0C;&#x518D;&#x7528;B&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x5230;A&#x91CC;&#x9762;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x8D28;&#x662F;&#x7528;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x4EE3;&#x66FF;&#x4E86;hashtable&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;&#x4E3A;O(1)&#x3002;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8FD8;&#x662F;O(n + m)&#x3002;</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -404,17 +425,17 @@
 17
 18
 </pre></td><td class="code"><pre><span class="comment">// copyright@caopengcs </span>
-<span class="comment">// “最好的方法”，时间复杂度O(n + m)，空间复杂度O(1)</span>
-<span class="keyword">bool</span> compare(<span class="built_in">string</span> &a,<span class="built_in">string</span> &b)
+<span class="comment">// &#x201C;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x201D;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n + m)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)</span>
+<span class="keyword">bool</span> compare(<span class="built_in">string</span> &amp;a,<span class="built_in">string</span> &amp;b)
 {
     <span class="keyword">int</span> hash = <span class="number">0</span>;
     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length(); ++i)
     {
-        hash |= (<span class="number">1</span> &lt;&lt; (a[i] - <span class="string">'A'</span>));
+        hash |= (<span class="number">1</span> &lt;&lt; (a[i] - <span class="string">&apos;A&apos;</span>));
     }
     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length(); ++i)
     {
-        <span class="keyword">if</span> ((hash & (<span class="number">1</span> &lt;&lt; (b[i] - <span class="string">'A'</span>))) == <span class="number">0</span>)
+        <span class="keyword">if</span> ((hash &amp; (<span class="number">1</span> &lt;&lt; (b[i] - <span class="string">&apos;A&apos;</span>))) == <span class="number">0</span>)
         {
             <span class="keyword">return</span> <span class="keyword">false</span>;
         }
@@ -423,148 +444,144 @@
 }
 </pre></td></tr></table></figure>
 
-
       
     </div>
-    <footer>
+    <footer class="article-footer">
+      <a data-url="http://www.hongtaozhy.com/2014/01/24/string1/" data-id="trlxytixcdt58uyp" class="article-share-link">Share</a>
       
-        
-  
-  <div class="categories">
-    <a href="/categories/算法/">算法</a>
-  </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/算法/">算法</a>, <a href="/tags/字符串/">字符串</a>, <a href="/tags/分享/">分享</a>
-  </div>
-
-<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];</script>
-
       
-      <div class="clearfix"></div>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分享/">分享</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/01/28/ios7_chrome/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          推荐一个Chrome扩展
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/01/09/category&&extension/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">(转)Objective-C分类 (category)和扩展(Extension)</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
-<section id="comment">
+<section id="comments">
   <!-- Duoshuo Comment BEGIN -->
-  	<div class="ds-thread"></div>
+    <div class="ds-thread"></div>
   <script type="text/javascript">
   var duoshuoQuery = {short_name:"hongtaozhy"};
-  	(function() {
-  		var ds = document.createElement('script');
-  		ds.type = 'text/javascript';ds.async = true;
-  		ds.src = 'http://static.duoshuo.com/embed.js';
-  		ds.charset = 'UTF-8';
-  		(document.getElementsByTagName('head')[0] 
-  		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-  	})();
-  	</script>
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = 'http://static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
   <!-- Duoshuo Comment END -->
 </section>
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:www.hongtaozhy.com">
-  </form>
-</div>
-
-  
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/Tips/">Tips</a><small>10</small></li>
-  
-    <li><a href="/categories/iOS/">iOS</a><small>4</small></li>
-  
-    <li><a href="/categories/markdown/">markdown</a><small>1</small></li>
-  
-    <li><a href="/categories/人生/">人生</a><small>2</small></li>
-  
-    <li><a href="/categories/算法/">算法</a><small>1</small></li>
-  
-  </ul>
-</div>
-
-
-  <iframe width="100%" height="650" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=650&fansRow=3&ptype=1&speed=50&skin=4&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2033686914&verifier=e0a18d12&dpc=1"></iframe>
-
-  
-<div class="widget tag">
-  <h3 class="title">最新文章</h3>
-  <ul class="entry">
-    
-      <li>
-        <a href="/2014/05/27/oc/">objective-c代码行数统计</a>
-      </li>
-    
-      <li>
-        <a href="/2014/05/16/svnmerge-1/">SVN Merge分支代码提交</a>
-      </li>
-    
-      <li>
-        <a href="/2014/05/16/mnq/">iOS模拟器路径</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/04/svnmerge/">SVN回滚代码</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a>
-      </li>
-    
-  </ul>
-</div>
-
-
-  <div class="widget tag">
-<h3 class="title">友情链接</h3>
-<ul class="entry">
-<li><a href="http://www.cppblog.com/wicbnu" title="从零开始"></a>wicbnu</li>
-<li><a href="http://woyaowenzi.github.io/" title="WOYAOWENZI's blog">WOYAOWENZI's blog</a></li>
-<li><a href="http://huangliangjie.gitcafe.com/" title="Liangjie's hexo site">Liangjie's hexo site</a></li>
-<li><a href="http://waysnotes.com/" title="WaysNotes">WaysNotes</a></li>
-</ul>
-</div>
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2014 hongtaozhy
-  
-</div>
-<div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("pre").addClass("prettyprint");
-        $("code").addClass("prettyprint");
+</section>
         
-        prettyPrint();
-    });
-</script>  
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/人生/">人生</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04">April 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01">January 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12">December 2013</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/05/27/oc/">objective-c代码行数统计</a>
+          </li>
+        
+          <li>
+            <a href="/2014/05/16/svnmerge-1/">SVN Merge分支代码提交</a>
+          </li>
+        
+          <li>
+            <a href="/2014/05/16/mnq/">iOS模拟器路径</a>
+          </li>
+        
+          <li>
+            <a href="/2014/04/04/svnmerge/">SVN回滚代码</a>
+          </li>
+        
+          <li>
+            <a href="/2014/04/04/xcconfig/">利用xcconfig来控制Xcode工程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    <iframe width="100%" height="650" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=650&fansRow=3&ptype=1&speed=50&skin=4&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2033686914&verifier=e0a18d12&dpc=1"></iframe>
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Hadn_t<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">存档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
 
+
+<script type="text/javascript" src="/js/script.js"></script>
+  </div>
 </body>
 </html>
